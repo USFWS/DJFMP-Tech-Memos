@@ -1,0 +1,499 @@
+# EFISH Annual Report------------------------
+
+### Author- Jacob Stagg*
+### Contact- jacob_stagg@fws.gov 
+### Date- 
+### R version- 4.5.2
+
+#Overview------------
+#This code produces figures and analysis for the FY2023 Delta Boat Electrofishing Annual Report. 
+
+# Select Field Year------Update as needed
+TargetFieldYear <- 2025
+this_root <- "field_year_2025" 
+  
+#Load Libraries----
+library('odbc')
+library('dplyr') 
+library('tidyr') 
+library('lubridate')
+library('stringr')
+library('ggplot2')
+library('ggthemes')
+library('ggridges')
+library('ggspatial')
+library('ggpubr')
+library('extrafont')
+library('scales')
+library('extrafont')
+library('sf')
+library("Rmisc")
+library("DBI")
+library('ggbump')
+library('patchwork')
+
+# Utility objects -------------------------------------------------------------------
+
+loadfonts(device="win")
+
+report_theme <- theme_bw() + 
+  theme(plot.title=element_text(colour="black", size=8),
+        axis.text=element_text(colour="black", size=8),
+        axis.title=element_text(colour="black", size=8),
+        legend.title=element_text(colour="black", size=8),
+        legend.text=element_text(colour="black", size=8),
+        strip.text=element_text(colour="black", size=8),
+        legend.box.spacing=margin(0,0,0,0),
+        legend.margin=margin(0,0,0,0),
+        legend.position="bottom")
+
+
+# Read in data from EDI posting-------------------------------------------------------
+data_2025 <- read.csv("https://pasta.lternet.edu/package/data/eml/edi/692/6/36e302f28cc66cd5b139d9f9382eb9a5")
+
+# Read in Delta shoreline and EFISH subregion shapefiles
+load("shapefiles.Rdata")
+
+
+#Map theme----------------------------
+density_map_theme <- report_theme + 
+  theme(legend.box.spacing=margin(0,0,0,0),
+        legend.margin=margin(t=1, r=0, b=1, l=0.1, unit="in")) + 
+  theme(axis.title=element_blank(),
+        axis.text=element_blank(),
+        axis.ticks=element_blank(),
+        panel.grid=element_blank(),
+        panel.border=element_blank(),
+        legend.title=element_text(size=9),
+        legend.text=element_text(size=9),
+        legend.position="right",
+        plot.title=element_text(lineheight=0.8, face="bold", hjust=0.5, size=9),
+        plot.margin=margin(t=0.1, r=0, b=0.1, l=0, unit="in"))
+
+fill_map <- c("Cache Slough Complex"="#2F4F4F",
+              "North Delta"="#27408B",
+              "Central Delta"="#0000FF",
+              "South Central Delta"="#009ACD",
+              "South Delta"="#8DB6CD",
+              "West Delta"="#FF0000")
+
+# Defining Field Year, Month, & Period for 2025-----------------------------------------
+
+EFISH_2025 <- data_2025 %>%
+  dplyr::filter(!Subregion %in% c("RESTORATION")) %>%
+  dplyr::mutate(TransectID=paste0(SampleDate,Subregion,StartTime)) %>%
+  dplyr::mutate(SampleDate=as.Date(SampleDate, "%m/%d/%Y"),
+                Year=lubridate::year(SampleDate),
+                MonthNum=lubridate::month(SampleDate),
+                MonthAbb=lubridate::month(SampleDate, label=TRUE, abbr=TRUE), 
+                Month_f=factor(MonthAbb, 
+                               levels=c("Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", 
+                                        "Mar","Apr","May", "Jun", "Jul" ))) %>%
+  dplyr::mutate(FieldYear=factor(ifelse(MonthNum %in% 8:12, Year + 1, Year)), 
+                 FieldMonth_f=factor(MonthNum, 
+                                     levels=c(8:12,1:7), 
+                                     ordered=TRUE)) %>%
+  dplyr::mutate(WaterYear=factor(ifelse(MonthNum %in% 10:12, Year + 1, Year)), 
+                WaterMonth_f=factor(MonthNum, 
+                                    levels=c(10:12,1:9), 
+                                    ordered=TRUE)) %>%
+  mutate(Period=factor(case_when(MonthAbb %in% c("Jul","Aug","Sep") ~ "Q3", 
+                                 MonthAbb %in% c("Oct","Nov","Dec") ~ "Q4",
+                                 MonthAbb %in% c("Jan","Feb","Mar") ~ "Q1",
+                                 MonthAbb %in% c("Apr","May","Jun") ~ "Q2"), 
+                       levels=c("Q1","Q2","Q3","Q4"))) %>%
+  mutate(Season=factor(case_when(MonthAbb %in% c("Jun","Jul","Aug") ~ "Summer", 
+                                 MonthAbb %in% c("Sep","Oct","Nov") ~ "Autumn",
+                                 MonthAbb %in% c("Dec","Jan","Feb") ~ "Winter",
+                                 MonthAbb %in% c("Mar","Apr","May") ~ "Spring"), 
+                       levels=c("Spring","Summer","Autumn","Winter"))) %>%
+  mutate(SubRegion=case_when(Subregion=="CLS"~"Cache Slough and Lindsey Slough",
+                             Subregion=="LI"~"Liberty Island",
+                             Subregion=="DSC"~"Sacramento Shipping Channel",
+                             Subregion=="RIO"~"Rio Vista",
+                             Subregion=="TWITCH"~"Twitchell Island",
+                             Subregion=="FRT"~"Franks Tract",
+                             Subregion=="SAC"~"Sacramento River",
+                             Subregion=="MOK"~"Mokelumne River",
+                             Subregion=="MINER"~"Miner and Steamboat Slough",
+                             Subregion=="UPSJR"~"Upper San Joaquin River",
+                             Subregion=="MOS"~"Mossdale",
+                             Subregion=="GRANT"~"Grant Line Canal",
+                             Subregion=="SJR"~"San Joaquin River",
+                             Subregion=="HOL"~"Holland Cut",
+                             Subregion=="MIL"~"Mildred Island",
+                             Subregion=="LSAC"~"Lower Sacramento River",
+                             Subregion=="LSJR"~"Lower San Joaquin River",
+                             Subregion=="CON"~"Confluence"))
+
+
+#SubRegion by Month tables---------------------------
+
+sites_by_fieldyearmonth <- EFISH_2025 %>%
+  dplyr::select(FieldYear, Month_f, SubRegion, TransectID) %>%
+  dplyr::distinct() %>%
+  dplyr::group_by(FieldYear, Month_f, SubRegion) %>%
+  dplyr::summarize(N=dplyr::n(), 
+                   .groups="drop") %>%
+  tidyr::pivot_wider(id_cols=SubRegion, names_from=c(FieldYear, Month_f), 
+                     values_from=N,
+                     values_fill=0)
+
+#Species pivTable-------------------------------------------
+
+Catch_by_Region_table <- EFISH_2025 %>%
+  dplyr::select(RegionCode, CommonName, Count) %>%
+  dplyr::group_by(RegionCode, CommonName) %>%
+  dplyr::summarize(TotalCount=sum(Count))  %>%
+  tidyr::pivot_wider(id_cols=CommonName, names_from=c(RegionCode), 
+                     values_from=TotalCount,
+                     values_fill=0)
+
+
+# Power ratio graphs - new data -----------------------------------------------------
+
+Power <- EFISH_2025 %>%
+  select(TransectID, SegmentNumber, SpecConductance, AmbConductivity, 
+         PeakVoltage, PeakWatts) %>%
+  distinct()
+
+pairs(Power[,c("SpecConductance","AmbConductivity","PeakVoltage","PeakWatts")], 
+      upper.panel=NULL)
+
+Power_Drift <- ggplot(EFISH_2025, aes(x=AmbConductivity, y=PeakVoltage, shape=factor(FieldYear), color=factor(FieldYear))) + 
+  geom_point(size=2) +
+  ggtitle("Voltage Drift") +
+  ylab("Volts") + 
+  xlab("Conductivity") 
+Power_Drift
+
+Power_output <- ggplot(EFISH_2025, aes(x=PeakWatts, y=PeakVoltage, shape=factor(FieldYear), color=factor(FieldYear))) + 
+  geom_point(size=2) +
+  ggtitle("Power output") +
+  ylab("Volts") + 
+  xlab("Watts")
+Power_output
+
+Power_eff <- ggplot(EFISH_2025, aes(x=AmbConductivity, y=PeakWatts, shape=factor(FieldYear), color=factor(FieldYear))) + 
+  geom_point(size=2) +
+  ggtitle("Power output") +
+  ylab("Watts") + 
+  xlab("Conductivity")
+Power_eff
+
+# Catch tables - Field year data ------------------------------------------------------------
+
+# Calculate CPUE at the segment level (by species), then summarize by species 
+# (across all unique segments).
+
+# 2025 catch table-----------------------------------------------------------------------------------
+CPUE_2025 <- EFISH_2025 %>%
+  dplyr::select(TransectID, FieldYear, Subregion, SampleDate, StartTime, SegmentNumber, SecondsPerSegment, 
+                CommonName, OrganismCode, Count) %>%
+  dplyr::mutate(CommonName=ifelse(OrganismCode == "LAMAM","Lamprey ammocete",
+                                  CommonName)) %>%
+  dplyr::filter(!is.na(SecondsPerSegment)) %>%
+  dplyr::filter(!CommonName %in% c("No Catch","no catch")) %>%
+  dplyr::filter(!CommonName %in% c("Centrarchid unknown")) %>%
+  dplyr::filter(FieldYear == 2025) %>%
+  dplyr::group_by(TransectID, FieldYear,Subregion, SampleDate, StartTime, SegmentNumber, SecondsPerSegment, 
+                  CommonName) %>%
+  dplyr::summarize(TotalCount=sum(Count),
+                   .groups="drop") %>%
+  tidyr::pivot_wider(id_cols=c(TransectID, FieldYear,Subregion, SampleDate, StartTime, SegmentNumber,
+                               SecondsPerSegment),
+                     names_from=CommonName,
+                     values_from=TotalCount,
+                     values_fill=0) %>%
+  tidyr::pivot_longer(cols=-c(TransectID, FieldYear,Subregion, SampleDate, StartTime, SegmentNumber, 
+                              SecondsPerSegment),
+                      names_to="CommonName",
+                      values_to="TotalCount") %>%
+  dplyr::mutate(CPUE_per_minute=TotalCount/(SecondsPerSegment/60)) %>%
+  dplyr::group_by(CommonName) %>%
+  dplyr::summarize(TotalCount=sum(TotalCount),
+                   MeanCPUE=mean(CPUE_per_minute),
+                   SDCPUE=sd(CPUE_per_minute),
+                   .groups="drop") %>%
+  dplyr::mutate(PercentCatch=TotalCount/sum(TotalCount)*100)
+
+
+write.csv(CPUE_2025, paste0("EFish_CPUE_",TargetFieldYear,"_FY.csv"), row.names=FALSE)
+
+# Total Catch over FY 2022-2025--------------------------------------------------
+CPUE_modern <- EFISH_2025 %>%
+  dplyr::select(TransectID, FieldYear, Subregion, SampleDate, StartTime, SegmentNumber, SecondsPerSegment, 
+                CommonName, OrganismCode, Count) %>%
+  dplyr::mutate(CommonName=ifelse(OrganismCode == "LAMAM","Lamprey ammocete",
+                                  CommonName)) %>%
+  dplyr::filter(!is.na(SecondsPerSegment)) %>% 
+  dplyr::filter(!CommonName %in% c("No Catch", "no catch")) %>%
+  dplyr::group_by(TransectID, FieldYear,Subregion, SampleDate, StartTime, SegmentNumber, SecondsPerSegment, 
+                  CommonName) %>%
+  dplyr::summarize(TotalCount=sum(Count),
+                   .groups="drop") %>%
+  tidyr::pivot_wider(id_cols=c(TransectID, FieldYear,Subregion, SampleDate, StartTime, SegmentNumber,
+                               SecondsPerSegment),
+                     names_from=CommonName,
+                     values_from=TotalCount,
+                     values_fill=0) %>%
+  tidyr::pivot_longer(cols=-c(TransectID, FieldYear,Subregion, SampleDate, StartTime, SegmentNumber, 
+                              SecondsPerSegment),
+                      names_to="CommonName",
+                      values_to="TotalCount") %>%
+  dplyr::mutate(CPUE_per_minute=TotalCount/(SecondsPerSegment/60)) %>%
+  dplyr::group_by(CommonName) %>%
+  dplyr::summarize(TotalCount=sum(TotalCount),
+                   MeanCPUE=mean(CPUE_per_minute),
+                   SDCPUE=sd(CPUE_per_minute),
+                   .groups="drop") %>%
+  dplyr::mutate(PercentCatch=TotalCount/sum(TotalCount)*100)
+
+#Salmon catch-------------------------------------------------------------------
+
+#Juvenile salmon race table breakdown-------------------------------------------
+
+EFISH_Maps <- EFISH_2025 %>%
+  dplyr::select(TransectID, FieldYear, RegionCode, SecondsPerSegment,SegmentNumber, RaceByLength, RaceByTag, OrganismCode, Count, ForkLength) %>%
+  dplyr::filter(OrganismCode == "CHN") %>%
+  #dplyr::filter(FieldYear == "2025")
+  dplyr::filter(!RaceByLength %in% c("Adult")) %>%
+  dplyr::filter(!is.na(SecondsPerSegment)) %>%
+  dplyr::mutate(RaceID=paste0(OrganismCode,RaceByLength))%>%
+  # mutate(Race=factor(case_when(RaceByLength %in% c("Fall","Spring","Winter","LateFall") ~ "Wild", 
+  #                              RaceByLength %in% c("") ~ "None"))) %>%
+  dplyr::filter(!FieldYear %in% c("2021")) 
+
+Salmon_by_FieldYear_table <- EFISH_Maps %>%
+  dplyr::select(FieldYear, RaceByLength, Count) %>%
+  dplyr::group_by(FieldYear, RaceByLength) %>%
+  dplyr::summarize(TotalCount=sum(Count))  %>%
+  tidyr::pivot_wider(id_cols=RaceByLength, names_from=c(FieldYear), 
+                     values_from=TotalCount,
+                     values_fill=0)
+
+Salmon_by_Region_table <- EFISH_Maps %>%
+  dplyr::select(RegionCode, RaceByLength, Count) %>%
+  dplyr::group_by(RegionCode, RaceByLength) %>%
+  dplyr::summarize(TotalCount=sum(Count))  %>%
+  tidyr::pivot_wider(id_cols=RegionCode, names_from=c(RaceByLength), 
+                     values_from=TotalCount,
+                     values_fill=0)
+
+write.csv(Salmon_by_Region_table, "Race_by_Length_Region_breakdown.csv", row.names=FALSE)
+
+#Juvenile salmon Catch maps by fieldyear-------------------------------------------
+
+MAPs <- EFISH_Maps %>%
+  dplyr::group_by(TransectID, FieldYear, RegionCode, SecondsPerSegment, 
+                  SegmentNumber, RaceID, Count) %>%
+  dplyr::summarize(TotalCount=sum(Count),
+                   .groups="drop") %>%
+  tidyr::pivot_wider(id_cols=c(TransectID, FieldYear, RegionCode, 
+                               SecondsPerSegment,SegmentNumber),
+                     names_from=RaceID,
+                     values_from=TotalCount,
+                     values_fill=0) %>%
+  tidyr::pivot_longer(cols=-c(TransectID, FieldYear, RegionCode, 
+                              SecondsPerSegment,SegmentNumber),
+                      names_to="RaceID",
+                      values_to="TotalCount") %>%
+  dplyr::mutate(CPUE_per_minute=TotalCount/(SecondsPerSegment/60)) %>%
+  mutate(Region=RegionCode)%>%
+  dplyr::group_by(Region, RaceID) %>%
+  dplyr::summarize(TotalCount=sum(TotalCount),
+                   MeanCPUE_per_minute=mean(CPUE_per_minute),
+                   SDCPUE_per_minute=sd(CPUE_per_minute),
+                   .groups="drop")
+
+Salmon_CPUE_by_Region_table <- MAPs %>%
+  dplyr::select(Region, RaceID, MeanCPUE_per_minute) %>%
+  dplyr::group_by(Region, RaceID) %>%
+  dplyr::summarize(TotalCount=mean(MeanCPUE_per_minute))  %>%
+  tidyr::pivot_wider(id_cols=Region, names_from=c(RaceID), 
+                     values_from=TotalCount,
+                     values_fill=0)
+
+subregions$OriginalRegion <- subregions$Region
+subregions$Region <- factor(subregions$OriginalRegion, 
+                            levels=c("Cache Complex",
+                                     "North",
+                                     "Central",
+                                     "South Central",
+                                     "South",
+                                     "West"), 
+                            labels=c("Cache Slough Complex",
+                                     "North Delta",
+                                     "Central Delta",
+                                     "South Central Delta",
+                                     "South Delta",
+                                     "West Delta"),
+                            ordered=TRUE)
+
+MAPs_sf <- dplyr::left_join(subregions, MAPs, by="Region")
+
+# Should be the same:
+nrow(MAPs)    # 1476
+nrow(MAPs_sf) # 1476
+
+# MAPs_sf_CHN <- subset(MAPs_sf, OrganismCode == "CHN")
+
+MapCHN <- ggplot() +
+  geom_sf(data = delta, fill = 'white', lwd = 0.05) +
+  geom_sf(data = MAPs_sf, aes(fill=MeanCPUE_per_minute,color=Region),linewidth=.5) +
+  facet_wrap( ~ RaceID) +
+  theme_tufte() +
+  scale_fill_viridis_c(option = "plasma",
+                       alpha = .4, name="Average\nFish/Minute",
+                       guide=guide_colourbar(barheight=unit(45, units="mm"),
+                                             #barwidth=unit(5, units="mm"),
+                                             draw.ulim=TRUE,
+                                             draw.llim=TRUE,
+                                             title.hjust=0.5,label.hjust=0.5,
+                                             title.position="top")) +
+  scale_color_manual(values=fill_map) +
+  guides(color="none") + 
+  ggtitle("Chinook Salmon") +
+  density_map_theme
+MapCHN
+
+
+png("CHN_Race_Loco.png", units="in", width=8.5, height=11, res=300)
+p_combined_CHN_map
+dev.off()
+
+# geom_tile Regional Heatmaps--------------------------------------------------- 
+
+# Keep only smaller fish. 
+# Calculate CPUE at the segment level (by species), then summarize by field year, 
+# field month, region, and species.
+
+EFISH_NoA <- EFISH_2025 %>%
+  dplyr::filter(!FieldYear %in% c("2021")) %>%
+  dplyr::filter(!is.na(SecondsPerSegment)) %>%
+  dplyr::filter(ForkLength <= 150) %>%
+  dplyr::filter(!RaceByLength %in% c("Adult"))
+
+
+EFISH_catch_FL_subset_for_grid <- EFISH_NoA  %>%
+  dplyr::group_by(FieldYear, Month_f, RegionCode, TransectID,
+                  SegmentNumber, OrganismCode) %>%
+  dplyr::summarise(Count=sum(Count),
+                   .groups="drop") %>%
+  dplyr::group_by(FieldYear, Month_f, RegionCode, TransectID,
+                  SegmentNumber, OrganismCode) %>%
+  dplyr::summarize(Count=sum(Count),
+                   .groups="drop")
+
+EFISH_effort_segment_for_grid <- EFISH_NoA %>%
+  dplyr::distinct(FieldYear, Month_f, RegionCode, TransectID,
+                  SegmentNumber, SecondsPerSegment)
+
+CPUE_by_Rmonth <- dplyr::left_join(EFISH_effort_segment_for_grid, 
+                                      EFISH_catch_FL_subset_for_grid,
+                                      by=c("FieldYear","Month_f",
+                                           "RegionCode","TransectID",
+                                           "SegmentNumber")) %>%
+  dplyr::mutate(CPUE_minute=Count/(SecondsPerSegment/60)) %>%
+  tidyr::pivot_wider(id_cols=c(FieldYear, Month_f, RegionCode, TransectID, 
+                               SegmentNumber),
+                     names_from=OrganismCode,
+                     values_from=CPUE_minute,
+                     values_fill=0) %>%
+  tidyr::pivot_longer(cols=-c(FieldYear, Month_f, RegionCode, TransectID, 
+                              SegmentNumber),
+											names_to="OrganismCode",
+											values_to="CPUE_minute") %>%
+  dplyr::group_by(FieldYear, Month_f, RegionCode, OrganismCode) %>%
+  dplyr::summarize(CPUE_minute_mean=mean(CPUE_minute),
+                   # CPUE_minute_SD=sd(CPUE_minute),
+                   n=dplyr::n(),
+                   .groups="drop") %>%
+  ## Order regions here. Might want to use more explicit names, could use
+  ## SubRegion instead.
+  dplyr::mutate(Region_f=factor(RegionCode,
+                                   levels=rev(c("Cache Slough Complex",
+                                                "North Delta",
+                                                "West Delta",
+                                                "Central Delta",
+                                                "South Central Delta",
+                                                "South Delta")),
+                                   ordered=TRUE))
+
+
+# Chinook 
+
+CPUE_by_Rmonth_CHN <- subset(CPUE_by_Rmonth, OrganismCode == "CHN")
+
+CHN_geom <- ggplot(CPUE_by_Rmonth_CHN) + 
+  geom_tile(aes(y=Region_f, x=Month_f, fill=CPUE_minute_mean)) +
+  facet_wrap(vars(FieldYear), labeller=labeller(FieldYear =~ paste("Field year", .x))) + 
+  ylab("Delta Regions") + 
+  xlab("Month") + 
+  labs(fill="Mean CPUE\n(Fish/Minute)",
+       title= paste("Chinook Salmon")) + 
+  scale_fill_gradient(low = "moccasin", high = "purple4")
+CHN_geom
+
+#Splittail
+
+CPUE_by_Rmonth_SPLT <- subset(CPUE_by_Rmonth, OrganismCode == "SPLT")
+
+SPLT_geom <- ggplot(CPUE_by_Rmonth_SPLT) + 
+  geom_tile(aes(y=Region_f, x=Month_f, fill=CPUE_minute_mean)) +
+  facet_wrap(vars(FieldYear), labeller=labeller(FieldYear =~ paste("Field year", .x))) + 
+  ylab("Delta Regions") + 
+  xlab("Month") + 
+  labs(fill="Mean CPUE\n(Fish/Minute)",
+       title= paste("Sacramento Splittail")) + 
+  scale_fill_gradient(low = "moccasin", high = "darkgreen")
+SPLT_geom
+
+#Striped bass
+
+CPUE_by_Rmonth_STB <- subset(CPUE_by_Rmonth, OrganismCode == "STB")
+
+STB_geom <- ggplot(CPUE_by_Rmonth_STB) + 
+  geom_tile(aes(y=Region_f, x=Month_f, fill=CPUE_minute_mean)) +
+  facet_wrap(vars(FieldYear), labeller=labeller(FieldYear =~ paste("Field year", .x))) + 
+  ylab("Delta Regions") + 
+  xlab("Month") + 
+  labs(fill="Mean CPUE\n(Fish/Minute)",
+       title= paste("Striped Bass")) + 
+  scale_fill_gradient(low = "moccasin", high = "midnightblue")
+STB_geom
+
+# American Shad 
+
+CPUE_by_Rmonth_AMS <- subset(CPUE_by_Rmonth, OrganismCode == "AMS")
+
+AMS_geom <- ggplot(CPUE_by_Rmonth_AMS) + 
+  geom_tile(aes(y=Region_f, x=Month_f, fill=CPUE_minute_mean)) +
+  facet_wrap(vars(FieldYear), labeller=labeller(FieldYear =~ paste("Field year", .x))) + 
+  ylab("Delta Regions") + 
+  xlab("Month") + 
+  labs(fill="Mean CPUE\n(Fish/Minute)",
+       title= paste("American Shad")) + 
+  scale_fill_gradient(low = "moccasin", high = "darkred")
+AMS_geom
+
+# Combined Heat map
+
+combined_map <- ggpubr::ggarrange(CHN_geom, SPLT_geom,  
+                                  STB_geom,AMS_geom,  
+                                  nrow=2, ncol=2) +
+  #labs(title= paste("Anadromous Juvenile Fishes"))+ 
+  theme(plot.background=element_rect(fill="white", color=NA))
+combined_map <- annotate_figure(p=combined_map,
+                                top = text_grob("Anadromous Juvenile Fishes", 
+                                  color = "black", face = "bold", size = 14))
+
+combined_map
+
+ggsave(filename="Anadromous Juvenile occupancy 4map.png", 
+       plot=combined_map, height=6, width=20,#pointsize=12, 
+       units="in")    
+
+
+
+###########################################################################3####
