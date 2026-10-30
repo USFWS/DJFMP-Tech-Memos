@@ -1,0 +1,973 @@
+"FieldYear","description","OrganismCode","CustomRaceGroup","Origin","AvgCPUE"
+"2000","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000165104742508231
+"2000","Chipps Island","CHN","Not_SpringWinter","Unknown",0.000116315881954785
+"2000","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2000","Chipps Island","CHN","Not_SpringWinter","Wild",0
+"2000","Chipps Island","CHN","Spring","Marked_Total",0.000000083864299922149
+"2000","Chipps Island","CHN","Spring","Unknown",0.0000401691778328378
+"2000","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2000","Chipps Island","CHN","Spring","Wild",0
+"2000","Chipps Island","CHN","Winter","Marked_Total",0.0000000792379898426131
+"2000","Chipps Island","CHN","Winter","Unknown",0
+"2000","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2000","Chipps Island","CHN","Winter","Wild",0.00000388518102138613
+"2000","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.0000448427512309261
+"2000","Mossdale","CHN","Not_SpringWinter","Unknown",0.0000898362348748281
+"2000","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2000","Mossdale","CHN","Not_SpringWinter","Wild",0
+"2000","Mossdale","CHN","Spring","Marked_Total",0
+"2000","Mossdale","CHN","Spring","Unknown",0.0000152832455125972
+"2000","Mossdale","CHN","Spring","Unmarked_Total",0
+"2000","Mossdale","CHN","Spring","Wild",0
+"2000","Mossdale","CHN","Winter","Marked_Total",0
+"2000","Mossdale","CHN","Winter","Unknown",0
+"2000","Mossdale","CHN","Winter","Unmarked_Total",0
+"2000","Mossdale","CHN","Winter","Wild",0.000000182155475055969
+"2000","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000406778935369294
+"2000","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0.000814654389960827
+"2000","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2000","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0
+"2000","Sherwood Harbor","CHN","Spring","Marked_Total",0
+"2000","Sherwood Harbor","CHN","Spring","Unknown",0.0000708547118389965
+"2000","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2000","Sherwood Harbor","CHN","Spring","Wild",0
+"2000","Sherwood Harbor","CHN","Winter","Marked_Total",0.000000179510122498348
+"2000","Sherwood Harbor","CHN","Winter","Unknown",0
+"2000","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2000","Sherwood Harbor","CHN","Winter","Wild",0.00000470872389682329
+"2001","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.000014254725477774
+"2001","Chipps Island","CHN","Not_SpringWinter","Unknown",0.0000985225331822992
+"2001","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2001","Chipps Island","CHN","Not_SpringWinter","Wild",0
+"2001","Chipps Island","CHN","Spring","Marked_Total",0.000000232950837867251
+"2001","Chipps Island","CHN","Spring","Unknown",0.00000884036685915269
+"2001","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2001","Chipps Island","CHN","Spring","Wild",0
+"2001","Chipps Island","CHN","Winter","Marked_Total",0.000000228431565457169
+"2001","Chipps Island","CHN","Winter","Unknown",0
+"2001","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2001","Chipps Island","CHN","Winter","Wild",0.00000314559092822017
+"2001","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.000136831491027764
+"2001","Mossdale","CHN","Not_SpringWinter","Unknown",0.000240958542375105
+"2001","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2001","Mossdale","CHN","Not_SpringWinter","Wild",0
+"2001","Mossdale","CHN","Spring","Marked_Total",0
+"2001","Mossdale","CHN","Spring","Unknown",0.0000359850398058906
+"2001","Mossdale","CHN","Spring","Unmarked_Total",0
+"2001","Mossdale","CHN","Spring","Wild",0
+"2001","Mossdale","CHN","Winter","Marked_Total",0
+"2001","Mossdale","CHN","Winter","Unknown",0
+"2001","Mossdale","CHN","Winter","Unmarked_Total",0
+"2001","Mossdale","CHN","Winter","Wild",0.00000239720468189656
+"2001","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000374449177976185
+"2001","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0.00086599017208414
+"2001","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2001","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0
+"2001","Sherwood Harbor","CHN","Spring","Marked_Total",0.000000489928949448703
+"2001","Sherwood Harbor","CHN","Spring","Unknown",0.000011221389308587
+"2001","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2001","Sherwood Harbor","CHN","Spring","Wild",0
+"2001","Sherwood Harbor","CHN","Winter","Marked_Total",0.00000011736772748174
+"2001","Sherwood Harbor","CHN","Winter","Unknown",0
+"2001","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2001","Sherwood Harbor","CHN","Winter","Wild",0.00000602819655885451
+"2002","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000179915602740396
+"2002","Chipps Island","CHN","Not_SpringWinter","Unknown",0.000065960024983241
+"2002","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2002","Chipps Island","CHN","Not_SpringWinter","Wild",0
+"2002","Chipps Island","CHN","Spring","Marked_Total",0.00000055936401892872
+"2002","Chipps Island","CHN","Spring","Unknown",0.00000945764684121537
+"2002","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2002","Chipps Island","CHN","Spring","Wild",0
+"2002","Chipps Island","CHN","Winter","Marked_Total",0.000000379506243241315
+"2002","Chipps Island","CHN","Winter","Unknown",0
+"2002","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2002","Chipps Island","CHN","Winter","Wild",0.00000228820434809841
+"2002","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.0000749937771737687
+"2002","Mossdale","CHN","Not_SpringWinter","Unknown",0.000115326955489166
+"2002","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2002","Mossdale","CHN","Not_SpringWinter","Wild",0
+"2002","Mossdale","CHN","Spring","Marked_Total",0
+"2002","Mossdale","CHN","Spring","Unknown",0.0000154848500451234
+"2002","Mossdale","CHN","Spring","Unmarked_Total",0
+"2002","Mossdale","CHN","Spring","Wild",0
+"2002","Mossdale","CHN","Winter","Marked_Total",0
+"2002","Mossdale","CHN","Winter","Unknown",0
+"2002","Mossdale","CHN","Winter","Unmarked_Total",0
+"2002","Mossdale","CHN","Winter","Wild",0.000000335427986796665
+"2002","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000599745578020861
+"2002","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0.000605355063390017
+"2002","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2002","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0
+"2002","Sherwood Harbor","CHN","Spring","Marked_Total",0.00000170621860985263
+"2002","Sherwood Harbor","CHN","Spring","Unknown",0.0000183514744228636
+"2002","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2002","Sherwood Harbor","CHN","Spring","Wild",0
+"2002","Sherwood Harbor","CHN","Winter","Marked_Total",0.000000240023433644823
+"2002","Sherwood Harbor","CHN","Winter","Unknown",0
+"2002","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2002","Sherwood Harbor","CHN","Winter","Wild",0.00000961203480725484
+"2003","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000159297777212665
+"2003","Chipps Island","CHN","Not_SpringWinter","Unknown",0.000157295863176931
+"2003","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2003","Chipps Island","CHN","Not_SpringWinter","Wild",0
+"2003","Chipps Island","CHN","Spring","Marked_Total",0.00000218484343241515
+"2003","Chipps Island","CHN","Spring","Unknown",0.0000577443871172917
+"2003","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2003","Chipps Island","CHN","Spring","Wild",0
+"2003","Chipps Island","CHN","Winter","Marked_Total",0.00000117953923157234
+"2003","Chipps Island","CHN","Winter","Unknown",0
+"2003","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2003","Chipps Island","CHN","Winter","Wild",0.00000683783217849708
+"2003","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.000106097110942565
+"2003","Mossdale","CHN","Not_SpringWinter","Unknown",0.0000935151264419389
+"2003","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2003","Mossdale","CHN","Not_SpringWinter","Wild",0
+"2003","Mossdale","CHN","Spring","Marked_Total",0
+"2003","Mossdale","CHN","Spring","Unknown",0.0000283767879498034
+"2003","Mossdale","CHN","Spring","Unmarked_Total",0
+"2003","Mossdale","CHN","Spring","Wild",0
+"2003","Mossdale","CHN","Winter","Marked_Total",0
+"2003","Mossdale","CHN","Winter","Unknown",0
+"2003","Mossdale","CHN","Winter","Unmarked_Total",0
+"2003","Mossdale","CHN","Winter","Wild",0
+"2003","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000453637300834304
+"2003","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0.000594403191522358
+"2003","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2003","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0
+"2003","Sherwood Harbor","CHN","Spring","Marked_Total",0.00000405071874636453
+"2003","Sherwood Harbor","CHN","Spring","Unknown",0.000122532636243782
+"2003","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2003","Sherwood Harbor","CHN","Spring","Wild",0
+"2003","Sherwood Harbor","CHN","Winter","Marked_Total",0.00000148128540204035
+"2003","Sherwood Harbor","CHN","Winter","Unknown",0
+"2003","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2003","Sherwood Harbor","CHN","Winter","Wild",0.00000768827877227775
+"2004","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000107519933159846
+"2004","Chipps Island","CHN","Not_SpringWinter","Unknown",0.000123890500436935
+"2004","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2004","Chipps Island","CHN","Not_SpringWinter","Wild",0
+"2004","Chipps Island","CHN","Spring","Marked_Total",0.000000250397651723271
+"2004","Chipps Island","CHN","Spring","Unknown",0.0000149395434574804
+"2004","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2004","Chipps Island","CHN","Spring","Wild",0
+"2004","Chipps Island","CHN","Winter","Marked_Total",0.000000620881241877479
+"2004","Chipps Island","CHN","Winter","Unknown",0
+"2004","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2004","Chipps Island","CHN","Winter","Wild",0.0000036725357627759
+"2004","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.0000479844554793828
+"2004","Mossdale","CHN","Not_SpringWinter","Unknown",0.0000563315216660987
+"2004","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2004","Mossdale","CHN","Not_SpringWinter","Wild",0
+"2004","Mossdale","CHN","Spring","Marked_Total",0
+"2004","Mossdale","CHN","Spring","Unknown",0.00000787070327335793
+"2004","Mossdale","CHN","Spring","Unmarked_Total",0
+"2004","Mossdale","CHN","Spring","Wild",0
+"2004","Mossdale","CHN","Winter","Marked_Total",0
+"2004","Mossdale","CHN","Winter","Unknown",0
+"2004","Mossdale","CHN","Winter","Unmarked_Total",0
+"2004","Mossdale","CHN","Winter","Wild",0.000000296386877895469
+"2004","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.00000695082690875714
+"2004","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0.00142820585200133
+"2004","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2004","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0
+"2004","Sherwood Harbor","CHN","Spring","Marked_Total",0.000000771317315224494
+"2004","Sherwood Harbor","CHN","Spring","Unknown",0.0000396235895235202
+"2004","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2004","Sherwood Harbor","CHN","Spring","Wild",0
+"2004","Sherwood Harbor","CHN","Winter","Marked_Total",0.000000131174627243775
+"2004","Sherwood Harbor","CHN","Winter","Unknown",0
+"2004","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2004","Sherwood Harbor","CHN","Winter","Wild",0.0000092092619482367
+"2005","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000126815884565581
+"2005","Chipps Island","CHN","Not_SpringWinter","Unknown",0.000180403488216016
+"2005","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2005","Chipps Island","CHN","Not_SpringWinter","Wild",0
+"2005","Chipps Island","CHN","Spring","Marked_Total",0.00000341967692053503
+"2005","Chipps Island","CHN","Spring","Unknown",0.0000322099354340696
+"2005","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2005","Chipps Island","CHN","Spring","Wild",0
+"2005","Chipps Island","CHN","Winter","Marked_Total",0.000000711722556913117
+"2005","Chipps Island","CHN","Winter","Unknown",0
+"2005","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2005","Chipps Island","CHN","Winter","Wild",0.00000348044862997446
+"2005","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.000034912294026695
+"2005","Mossdale","CHN","Not_SpringWinter","Unknown",0.0000341276593330664
+"2005","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2005","Mossdale","CHN","Not_SpringWinter","Wild",0
+"2005","Mossdale","CHN","Spring","Marked_Total",0
+"2005","Mossdale","CHN","Spring","Unknown",0.0000201405409034711
+"2005","Mossdale","CHN","Spring","Unmarked_Total",0
+"2005","Mossdale","CHN","Spring","Wild",0
+"2005","Mossdale","CHN","Winter","Marked_Total",0
+"2005","Mossdale","CHN","Winter","Unknown",0
+"2005","Mossdale","CHN","Winter","Unmarked_Total",0
+"2005","Mossdale","CHN","Winter","Wild",0.0000000562690913770884
+"2005","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.000019106286900519
+"2005","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0.000662348082594041
+"2005","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2005","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0
+"2005","Sherwood Harbor","CHN","Spring","Marked_Total",0.000012162685760598
+"2005","Sherwood Harbor","CHN","Spring","Unknown",0.0000512621316581357
+"2005","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2005","Sherwood Harbor","CHN","Spring","Wild",0
+"2005","Sherwood Harbor","CHN","Winter","Marked_Total",0.00000182374580652894
+"2005","Sherwood Harbor","CHN","Winter","Unknown",0
+"2005","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2005","Sherwood Harbor","CHN","Winter","Wild",0.0000061949239550476
+"2006","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000104220771504801
+"2006","Chipps Island","CHN","Not_SpringWinter","Unknown",0.000154412524604211
+"2006","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2006","Chipps Island","CHN","Not_SpringWinter","Wild",0
+"2006","Chipps Island","CHN","Spring","Marked_Total",0.00000394538427226554
+"2006","Chipps Island","CHN","Spring","Unknown",0.0000384709170940181
+"2006","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2006","Chipps Island","CHN","Spring","Wild",0
+"2006","Chipps Island","CHN","Winter","Marked_Total",0.000000712547762801219
+"2006","Chipps Island","CHN","Winter","Unknown",0
+"2006","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2006","Chipps Island","CHN","Winter","Wild",0.0000096652085861082
+"2006","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.00000968619078948013
+"2006","Mossdale","CHN","Not_SpringWinter","Unknown",0.0000480579457443497
+"2006","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2006","Mossdale","CHN","Not_SpringWinter","Wild",0
+"2006","Mossdale","CHN","Spring","Marked_Total",0
+"2006","Mossdale","CHN","Spring","Unknown",0.0000203806138049261
+"2006","Mossdale","CHN","Spring","Unmarked_Total",0
+"2006","Mossdale","CHN","Spring","Wild",0
+"2006","Mossdale","CHN","Winter","Marked_Total",0
+"2006","Mossdale","CHN","Winter","Unknown",0
+"2006","Mossdale","CHN","Winter","Unmarked_Total",0
+"2006","Mossdale","CHN","Winter","Wild",0.000000325419445742818
+"2006","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000106121104531485
+"2006","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0.00043083919766784
+"2006","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2006","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0
+"2006","Sherwood Harbor","CHN","Spring","Marked_Total",0.00000843094282480704
+"2006","Sherwood Harbor","CHN","Spring","Unknown",0.0000550894158399515
+"2006","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2006","Sherwood Harbor","CHN","Spring","Wild",0
+"2006","Sherwood Harbor","CHN","Winter","Marked_Total",0.000000670534927256335
+"2006","Sherwood Harbor","CHN","Winter","Unknown",0
+"2006","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2006","Sherwood Harbor","CHN","Winter","Wild",0.0000103290222166966
+"2007","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000167103321928435
+"2007","Chipps Island","CHN","Not_SpringWinter","Unknown",0.0000558651659107961
+"2007","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2007","Chipps Island","CHN","Not_SpringWinter","Wild",0
+"2007","Chipps Island","CHN","Spring","Marked_Total",0.00000233937820204837
+"2007","Chipps Island","CHN","Spring","Unknown",0.0000188413650190863
+"2007","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2007","Chipps Island","CHN","Spring","Wild",0
+"2007","Chipps Island","CHN","Winter","Marked_Total",0.000000828349559734934
+"2007","Chipps Island","CHN","Winter","Unknown",0
+"2007","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2007","Chipps Island","CHN","Winter","Wild",0.00000379405117435509
+"2007","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.0000100990189349999
+"2007","Mossdale","CHN","Not_SpringWinter","Unknown",0.0000844890068670667
+"2007","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2007","Mossdale","CHN","Not_SpringWinter","Wild",0
+"2007","Mossdale","CHN","Spring","Marked_Total",0.0000000288037030654487
+"2007","Mossdale","CHN","Spring","Unknown",0.0000320437397062711
+"2007","Mossdale","CHN","Spring","Unmarked_Total",0
+"2007","Mossdale","CHN","Spring","Wild",0
+"2007","Mossdale","CHN","Winter","Marked_Total",0
+"2007","Mossdale","CHN","Winter","Unknown",0
+"2007","Mossdale","CHN","Winter","Unmarked_Total",0
+"2007","Mossdale","CHN","Winter","Wild",0.000000859994940231779
+"2007","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000938467971005256
+"2007","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0.000462991152241051
+"2007","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2007","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0
+"2007","Sherwood Harbor","CHN","Spring","Marked_Total",0.0000133093508626715
+"2007","Sherwood Harbor","CHN","Spring","Unknown",0.0000172511720027368
+"2007","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2007","Sherwood Harbor","CHN","Spring","Wild",0
+"2007","Sherwood Harbor","CHN","Winter","Marked_Total",0.0000000611932216861596
+"2007","Sherwood Harbor","CHN","Winter","Unknown",0
+"2007","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2007","Sherwood Harbor","CHN","Winter","Wild",0.00000637915746475207
+"2008","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000117560648288468
+"2008","Chipps Island","CHN","Not_SpringWinter","Unknown",0
+"2008","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2008","Chipps Island","CHN","Not_SpringWinter","Wild",0.0000223964088500654
+"2008","Chipps Island","CHN","Spring","Marked_Total",0.00000737322716105035
+"2008","Chipps Island","CHN","Spring","Unknown",0
+"2008","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2008","Chipps Island","CHN","Spring","Wild",0.00000982169517551629
+"2008","Chipps Island","CHN","Winter","Marked_Total",0.000000138064084563442
+"2008","Chipps Island","CHN","Winter","Unknown",0
+"2008","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2008","Chipps Island","CHN","Winter","Wild",0.000002371512056202
+"2008","Mossdale","CHN","Not_SpringWinter","Marked_Total",0
+"2008","Mossdale","CHN","Not_SpringWinter","Unknown",0
+"2008","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2008","Mossdale","CHN","Not_SpringWinter","Wild",0.0000612036987775215
+"2008","Mossdale","CHN","Spring","Marked_Total",0
+"2008","Mossdale","CHN","Spring","Unknown",0
+"2008","Mossdale","CHN","Spring","Unmarked_Total",0
+"2008","Mossdale","CHN","Spring","Wild",0.00002360801938361
+"2008","Mossdale","CHN","Winter","Marked_Total",0
+"2008","Mossdale","CHN","Winter","Unknown",0
+"2008","Mossdale","CHN","Winter","Unmarked_Total",0
+"2008","Mossdale","CHN","Winter","Wild",0.000000223808311062278
+"2008","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000445959245992906
+"2008","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
+"2008","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2008","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.000242107223968709
+"2008","Sherwood Harbor","CHN","Spring","Marked_Total",0.00000699957731213081
+"2008","Sherwood Harbor","CHN","Spring","Unknown",0
+"2008","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2008","Sherwood Harbor","CHN","Spring","Wild",0.00000889523221147269
+"2008","Sherwood Harbor","CHN","Winter","Marked_Total",0.0000000778387857562224
+"2008","Sherwood Harbor","CHN","Winter","Unknown",0
+"2008","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2008","Sherwood Harbor","CHN","Winter","Wild",0.00000298955868166346
+"2009","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000224244441823652
+"2009","Chipps Island","CHN","Not_SpringWinter","Unknown",0
+"2009","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2009","Chipps Island","CHN","Not_SpringWinter","Wild",0.0000461101383182721
+"2009","Chipps Island","CHN","Spring","Marked_Total",0.00000385728305459666
+"2009","Chipps Island","CHN","Spring","Unknown",0
+"2009","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2009","Chipps Island","CHN","Spring","Wild",0.000010682231847287
+"2009","Chipps Island","CHN","Winter","Marked_Total",0.0000000554116704074886
+"2009","Chipps Island","CHN","Winter","Unknown",0
+"2009","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2009","Chipps Island","CHN","Winter","Wild",0.00000310159295189597
+"2009","Mossdale","CHN","Not_SpringWinter","Marked_Total",0
+"2009","Mossdale","CHN","Not_SpringWinter","Unknown",0
+"2009","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2009","Mossdale","CHN","Not_SpringWinter","Wild",0.0000152261313343049
+"2009","Mossdale","CHN","Spring","Marked_Total",0
+"2009","Mossdale","CHN","Spring","Unknown",0
+"2009","Mossdale","CHN","Spring","Unmarked_Total",0
+"2009","Mossdale","CHN","Spring","Wild",0.0000211699632413225
+"2009","Mossdale","CHN","Winter","Marked_Total",0
+"2009","Mossdale","CHN","Winter","Unknown",0
+"2009","Mossdale","CHN","Winter","Unmarked_Total",0
+"2009","Mossdale","CHN","Winter","Wild",0.000000371104977945198
+"2009","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000678273545151525
+"2009","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
+"2009","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2009","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.000215902480064036
+"2009","Sherwood Harbor","CHN","Spring","Marked_Total",0.00000764435443049831
+"2009","Sherwood Harbor","CHN","Spring","Unknown",0
+"2009","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2009","Sherwood Harbor","CHN","Spring","Wild",0.0000216238751991427
+"2009","Sherwood Harbor","CHN","Winter","Marked_Total",0
+"2009","Sherwood Harbor","CHN","Winter","Unknown",0
+"2009","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2009","Sherwood Harbor","CHN","Winter","Wild",0.00000158222843379713
+"2010","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000652539749603421
+"2010","Chipps Island","CHN","Not_SpringWinter","Unknown",0
+"2010","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2010","Chipps Island","CHN","Not_SpringWinter","Wild",0.0000768821949290873
+"2010","Chipps Island","CHN","Spring","Marked_Total",0.0000058644076453545
+"2010","Chipps Island","CHN","Spring","Unknown",0
+"2010","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2010","Chipps Island","CHN","Spring","Wild",0.0000227882127487672
+"2010","Chipps Island","CHN","Winter","Marked_Total",0.00000145241985159031
+"2010","Chipps Island","CHN","Winter","Unknown",0
+"2010","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2010","Chipps Island","CHN","Winter","Wild",0.000002000697631893
+"2010","Mossdale","CHN","Not_SpringWinter","Marked_Total",0
+"2010","Mossdale","CHN","Not_SpringWinter","Unknown",0
+"2010","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2010","Mossdale","CHN","Not_SpringWinter","Wild",0.00000725304454833521
+"2010","Mossdale","CHN","Spring","Marked_Total",0
+"2010","Mossdale","CHN","Spring","Unknown",0
+"2010","Mossdale","CHN","Spring","Unmarked_Total",0
+"2010","Mossdale","CHN","Spring","Wild",0.00000777461399590325
+"2010","Mossdale","CHN","Winter","Marked_Total",0
+"2010","Mossdale","CHN","Winter","Unknown",0
+"2010","Mossdale","CHN","Winter","Unmarked_Total",0
+"2010","Mossdale","CHN","Winter","Wild",0.000000687734739780867
+"2010","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000163129668790455
+"2010","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
+"2010","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2010","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.0000883300135493726
+"2010","Sherwood Harbor","CHN","Spring","Marked_Total",0.0000204492686956105
+"2010","Sherwood Harbor","CHN","Spring","Unknown",0
+"2010","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2010","Sherwood Harbor","CHN","Spring","Wild",0.0000205037092146425
+"2010","Sherwood Harbor","CHN","Winter","Marked_Total",0.00000156807930694442
+"2010","Sherwood Harbor","CHN","Winter","Unknown",0
+"2010","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2010","Sherwood Harbor","CHN","Winter","Wild",0.00000107623019704321
+"2011","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000338832795196967
+"2011","Chipps Island","CHN","Not_SpringWinter","Unknown",0
+"2011","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2011","Chipps Island","CHN","Not_SpringWinter","Wild",0.000117586345244294
+"2011","Chipps Island","CHN","Spring","Marked_Total",0.0000094748199696644
+"2011","Chipps Island","CHN","Spring","Unknown",0
+"2011","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2011","Chipps Island","CHN","Spring","Wild",0.0000176238428859668
+"2011","Chipps Island","CHN","Winter","Marked_Total",0.000000071822375530119
+"2011","Chipps Island","CHN","Winter","Unknown",0
+"2011","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2011","Chipps Island","CHN","Winter","Wild",0.00000181430048922226
+"2011","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.0000142874656387099
+"2011","Mossdale","CHN","Not_SpringWinter","Unknown",0
+"2011","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2011","Mossdale","CHN","Not_SpringWinter","Wild",0.0000814213596341299
+"2011","Mossdale","CHN","Spring","Marked_Total",0
+"2011","Mossdale","CHN","Spring","Unknown",0
+"2011","Mossdale","CHN","Spring","Unmarked_Total",0
+"2011","Mossdale","CHN","Spring","Wild",0.0000363840524270766
+"2011","Mossdale","CHN","Winter","Marked_Total",0
+"2011","Mossdale","CHN","Winter","Unknown",0
+"2011","Mossdale","CHN","Winter","Unmarked_Total",0
+"2011","Mossdale","CHN","Winter","Wild",0.00000075302235166637
+"2011","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000308808500944942
+"2011","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
+"2011","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2011","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.000204739158576703
+"2011","Sherwood Harbor","CHN","Spring","Marked_Total",0.00000440153233362092
+"2011","Sherwood Harbor","CHN","Spring","Unknown",0
+"2011","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2011","Sherwood Harbor","CHN","Spring","Wild",0.0000403992734870452
+"2011","Sherwood Harbor","CHN","Winter","Marked_Total",0
+"2011","Sherwood Harbor","CHN","Winter","Unknown",0
+"2011","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2011","Sherwood Harbor","CHN","Winter","Wild",0.00000183653325968242
+"2012","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000216317227467451
+"2012","Chipps Island","CHN","Not_SpringWinter","Unknown",0
+"2012","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2012","Chipps Island","CHN","Not_SpringWinter","Wild",0.0000613961660793791
+"2012","Chipps Island","CHN","Spring","Marked_Total",0.0000052311318165913
+"2012","Chipps Island","CHN","Spring","Unknown",0
+"2012","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2012","Chipps Island","CHN","Spring","Wild",0.0000371744982630578
+"2012","Chipps Island","CHN","Winter","Marked_Total",0.000000268745470849525
+"2012","Chipps Island","CHN","Winter","Unknown",0
+"2012","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2012","Chipps Island","CHN","Winter","Wild",0.00000214487808904826
+"2012","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.0000644679162760422
+"2012","Mossdale","CHN","Not_SpringWinter","Unknown",0
+"2012","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2012","Mossdale","CHN","Not_SpringWinter","Wild",0.000113712645547538
+"2012","Mossdale","CHN","Spring","Marked_Total",0
+"2012","Mossdale","CHN","Spring","Unknown",0
+"2012","Mossdale","CHN","Spring","Unmarked_Total",0
+"2012","Mossdale","CHN","Spring","Wild",0.0000706966276545542
+"2012","Mossdale","CHN","Winter","Marked_Total",0
+"2012","Mossdale","CHN","Winter","Unknown",0
+"2012","Mossdale","CHN","Winter","Unmarked_Total",0
+"2012","Mossdale","CHN","Winter","Wild",0.00000457776920935583
+"2012","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000476999690277751
+"2012","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
+"2012","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2012","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.000248206136184541
+"2012","Sherwood Harbor","CHN","Spring","Marked_Total",0.000013057078338026
+"2012","Sherwood Harbor","CHN","Spring","Unknown",0
+"2012","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2012","Sherwood Harbor","CHN","Spring","Wild",0.0000279772730042306
+"2012","Sherwood Harbor","CHN","Winter","Marked_Total",0.00000100064005215492
+"2012","Sherwood Harbor","CHN","Winter","Unknown",0
+"2012","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2012","Sherwood Harbor","CHN","Winter","Wild",0.00000263348418127507
+"2013","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000211935721472181
+"2013","Chipps Island","CHN","Not_SpringWinter","Unknown",0
+"2013","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2013","Chipps Island","CHN","Not_SpringWinter","Wild",0.0000462127125280158
+"2013","Chipps Island","CHN","Spring","Marked_Total",0.00000305028913995099
+"2013","Chipps Island","CHN","Spring","Unknown",0
+"2013","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2013","Chipps Island","CHN","Spring","Wild",0.0000171830895434106
+"2013","Chipps Island","CHN","Winter","Marked_Total",0.0000000240967851368482
+"2013","Chipps Island","CHN","Winter","Unknown",0
+"2013","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2013","Chipps Island","CHN","Winter","Wild",0.00000186948704370038
+"2013","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.00000384660842698844
+"2013","Mossdale","CHN","Not_SpringWinter","Unknown",0
+"2013","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2013","Mossdale","CHN","Not_SpringWinter","Wild",0.000272525834344857
+"2013","Mossdale","CHN","Spring","Marked_Total",0
+"2013","Mossdale","CHN","Spring","Unknown",0
+"2013","Mossdale","CHN","Spring","Unmarked_Total",0
+"2013","Mossdale","CHN","Spring","Wild",0.0000369331468523135
+"2013","Mossdale","CHN","Winter","Marked_Total",0
+"2013","Mossdale","CHN","Winter","Unknown",0
+"2013","Mossdale","CHN","Winter","Unmarked_Total",0
+"2013","Mossdale","CHN","Winter","Wild",0.000000174361798122607
+"2013","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000546848391642352
+"2013","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
+"2013","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2013","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.000280557003194432
+"2013","Sherwood Harbor","CHN","Spring","Marked_Total",0.0000225953011818652
+"2013","Sherwood Harbor","CHN","Spring","Unknown",0
+"2013","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2013","Sherwood Harbor","CHN","Spring","Wild",0.0000460166414893288
+"2013","Sherwood Harbor","CHN","Winter","Marked_Total",0.000000176011996442367
+"2013","Sherwood Harbor","CHN","Winter","Unknown",0
+"2013","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2013","Sherwood Harbor","CHN","Winter","Wild",0.00000742128792333149
+"2014","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000158883889056625
+"2014","Chipps Island","CHN","Not_SpringWinter","Unknown",0
+"2014","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2014","Chipps Island","CHN","Not_SpringWinter","Wild",0.0000311672837721846
+"2014","Chipps Island","CHN","Spring","Marked_Total",0
+"2014","Chipps Island","CHN","Spring","Unknown",0
+"2014","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2014","Chipps Island","CHN","Spring","Wild",0.0000397625769764148
+"2014","Chipps Island","CHN","Winter","Marked_Total",0.000000626859357370973
+"2014","Chipps Island","CHN","Winter","Unknown",0
+"2014","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2014","Chipps Island","CHN","Winter","Wild",0.0000021959495862745
+"2014","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.000000702062782850915
+"2014","Mossdale","CHN","Not_SpringWinter","Unknown",0
+"2014","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2014","Mossdale","CHN","Not_SpringWinter","Wild",0.0000593303359853474
+"2014","Mossdale","CHN","Spring","Marked_Total",0
+"2014","Mossdale","CHN","Spring","Unknown",0
+"2014","Mossdale","CHN","Spring","Unmarked_Total",0
+"2014","Mossdale","CHN","Spring","Wild",0.0000167859133160518
+"2014","Mossdale","CHN","Winter","Marked_Total",0
+"2014","Mossdale","CHN","Winter","Unknown",0
+"2014","Mossdale","CHN","Winter","Unmarked_Total",0
+"2014","Mossdale","CHN","Winter","Wild",0.0000000602961914007405
+"2014","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000503234737442425
+"2014","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
+"2014","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2014","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.00132365147516014
+"2014","Sherwood Harbor","CHN","Spring","Marked_Total",0.000000712021465231951
+"2014","Sherwood Harbor","CHN","Spring","Unknown",0
+"2014","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2014","Sherwood Harbor","CHN","Spring","Wild",0.0000819896610418092
+"2014","Sherwood Harbor","CHN","Winter","Marked_Total",0.00000100472809659059
+"2014","Sherwood Harbor","CHN","Winter","Unknown",0
+"2014","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2014","Sherwood Harbor","CHN","Winter","Wild",0.00000387572201892077
+"2015","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000184285132614507
+"2015","Chipps Island","CHN","Not_SpringWinter","Unknown",0
+"2015","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2015","Chipps Island","CHN","Not_SpringWinter","Wild",0.0000138466783081349
+"2015","Chipps Island","CHN","Spring","Marked_Total",0.0000000248484105186484
+"2015","Chipps Island","CHN","Spring","Unknown",0
+"2015","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2015","Chipps Island","CHN","Spring","Wild",0.0000339293738701468
+"2015","Chipps Island","CHN","Winter","Marked_Total",0.00000289577761242646
+"2015","Chipps Island","CHN","Winter","Unknown",0
+"2015","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2015","Chipps Island","CHN","Winter","Wild",0.00000123151096828487
+"2015","Mossdale","CHN","Not_SpringWinter","Marked_Total",0
+"2015","Mossdale","CHN","Not_SpringWinter","Unknown",0
+"2015","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2015","Mossdale","CHN","Not_SpringWinter","Wild",0.000000232112693691132
+"2015","Mossdale","CHN","Spring","Marked_Total",0.000000173705564244989
+"2015","Mossdale","CHN","Spring","Unknown",0
+"2015","Mossdale","CHN","Spring","Unmarked_Total",0
+"2015","Mossdale","CHN","Spring","Wild",0.00000382541967226082
+"2015","Mossdale","CHN","Winter","Marked_Total",0
+"2015","Mossdale","CHN","Winter","Unknown",0
+"2015","Mossdale","CHN","Winter","Unmarked_Total",0
+"2015","Mossdale","CHN","Winter","Wild",0
+"2015","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.00000196714317773847
+"2015","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
+"2015","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2015","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.000048127715798488
+"2015","Sherwood Harbor","CHN","Spring","Marked_Total",0.00000538141532077666
+"2015","Sherwood Harbor","CHN","Spring","Unknown",0
+"2015","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2015","Sherwood Harbor","CHN","Spring","Wild",0.00000738914844660812
+"2015","Sherwood Harbor","CHN","Winter","Marked_Total",0.0000073930490953361
+"2015","Sherwood Harbor","CHN","Winter","Unknown",0
+"2015","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2015","Sherwood Harbor","CHN","Winter","Wild",0.00000194033788189343
+"2016","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000110442884075368
+"2016","Chipps Island","CHN","Not_SpringWinter","Unknown",0
+"2016","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2016","Chipps Island","CHN","Not_SpringWinter","Wild",0.0000253460554681991
+"2016","Chipps Island","CHN","Spring","Marked_Total",0.0000033200056499358
+"2016","Chipps Island","CHN","Spring","Unknown",0
+"2016","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2016","Chipps Island","CHN","Spring","Wild",0.000019394354492387
+"2016","Chipps Island","CHN","Winter","Marked_Total",0.00000356221747152627
+"2016","Chipps Island","CHN","Winter","Unknown",0
+"2016","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2016","Chipps Island","CHN","Winter","Wild",0.00000159118956341153
+"2016","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.000000217446391305703
+"2016","Mossdale","CHN","Not_SpringWinter","Unknown",0
+"2016","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2016","Mossdale","CHN","Not_SpringWinter","Wild",0.0000039471454557346
+"2016","Mossdale","CHN","Spring","Marked_Total",0.00000361884909760846
+"2016","Mossdale","CHN","Spring","Unknown",0
+"2016","Mossdale","CHN","Spring","Unmarked_Total",0
+"2016","Mossdale","CHN","Spring","Wild",0.0000054629354256823
+"2016","Mossdale","CHN","Winter","Marked_Total",0
+"2016","Mossdale","CHN","Winter","Unknown",0
+"2016","Mossdale","CHN","Winter","Unmarked_Total",0
+"2016","Mossdale","CHN","Winter","Wild",0
+"2016","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000187387458755103
+"2016","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
+"2016","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2016","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.000108036092872389
+"2016","Sherwood Harbor","CHN","Spring","Marked_Total",0.0000104445171661516
+"2016","Sherwood Harbor","CHN","Spring","Unknown",0
+"2016","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2016","Sherwood Harbor","CHN","Spring","Wild",0.0000257994652305008
+"2016","Sherwood Harbor","CHN","Winter","Marked_Total",0.00000160165674807049
+"2016","Sherwood Harbor","CHN","Winter","Unknown",0
+"2016","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2016","Sherwood Harbor","CHN","Winter","Wild",0.00000102188586272215
+"2017","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.000039136783276147
+"2017","Chipps Island","CHN","Not_SpringWinter","Unknown",0
+"2017","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2017","Chipps Island","CHN","Not_SpringWinter","Wild",0.0000856767807771255
+"2017","Chipps Island","CHN","Spring","Marked_Total",0.00000919912798423636
+"2017","Chipps Island","CHN","Spring","Unknown",0
+"2017","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2017","Chipps Island","CHN","Spring","Wild",0.0000563130301997894
+"2017","Chipps Island","CHN","Winter","Marked_Total",0.000000367728643295889
+"2017","Chipps Island","CHN","Winter","Unknown",0
+"2017","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2017","Chipps Island","CHN","Winter","Wild",0.00000440419270363373
+"2017","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.00000567523306843495
+"2017","Mossdale","CHN","Not_SpringWinter","Unknown",0
+"2017","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2017","Mossdale","CHN","Not_SpringWinter","Wild",0.0000546577234900565
+"2017","Mossdale","CHN","Spring","Marked_Total",0.00000270191538750977
+"2017","Mossdale","CHN","Spring","Unknown",0
+"2017","Mossdale","CHN","Spring","Unmarked_Total",0
+"2017","Mossdale","CHN","Spring","Wild",0.0000360079577629318
+"2017","Mossdale","CHN","Winter","Marked_Total",0
+"2017","Mossdale","CHN","Winter","Unknown",0
+"2017","Mossdale","CHN","Winter","Unmarked_Total",0
+"2017","Mossdale","CHN","Winter","Wild",0.00000056028319452414
+"2017","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.000113019816132171
+"2017","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
+"2017","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2017","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.000446581345532163
+"2017","Sherwood Harbor","CHN","Spring","Marked_Total",0.000035612138075177
+"2017","Sherwood Harbor","CHN","Spring","Unknown",0
+"2017","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2017","Sherwood Harbor","CHN","Spring","Wild",0.000115620117868164
+"2017","Sherwood Harbor","CHN","Winter","Marked_Total",0.000000763828988673306
+"2017","Sherwood Harbor","CHN","Winter","Unknown",0
+"2017","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2017","Sherwood Harbor","CHN","Winter","Wild",0.00000382635626259371
+"2018","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000146501235091271
+"2018","Chipps Island","CHN","Not_SpringWinter","Unknown",0
+"2018","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2018","Chipps Island","CHN","Not_SpringWinter","Wild",0.000025372071878756
+"2018","Chipps Island","CHN","Spring","Marked_Total",0.00000129510015513404
+"2018","Chipps Island","CHN","Spring","Unknown",0
+"2018","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2018","Chipps Island","CHN","Spring","Wild",0.0000241544779501136
+"2018","Chipps Island","CHN","Winter","Marked_Total",0.000000937843503947036
+"2018","Chipps Island","CHN","Winter","Unknown",0
+"2018","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2018","Chipps Island","CHN","Winter","Wild",0.00000207102817036098
+"2018","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.000000144299520184302
+"2018","Mossdale","CHN","Not_SpringWinter","Unknown",0
+"2018","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2018","Mossdale","CHN","Not_SpringWinter","Wild",0.0000572389895556748
+"2018","Mossdale","CHN","Spring","Marked_Total",0.0000016255780550943
+"2018","Mossdale","CHN","Spring","Unknown",0
+"2018","Mossdale","CHN","Spring","Unmarked_Total",0
+"2018","Mossdale","CHN","Spring","Wild",0.0000262195262954508
+"2018","Mossdale","CHN","Winter","Marked_Total",0
+"2018","Mossdale","CHN","Winter","Unknown",0
+"2018","Mossdale","CHN","Winter","Unmarked_Total",0
+"2018","Mossdale","CHN","Winter","Wild",0.000000452031034086018
+"2018","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000095732481587237
+"2018","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
+"2018","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2018","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.0000623386281803536
+"2018","Sherwood Harbor","CHN","Spring","Marked_Total",0.00000341286127885803
+"2018","Sherwood Harbor","CHN","Spring","Unknown",0
+"2018","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2018","Sherwood Harbor","CHN","Spring","Wild",0.000014413184799354
+"2018","Sherwood Harbor","CHN","Winter","Marked_Total",0.00000131062996157677
+"2018","Sherwood Harbor","CHN","Winter","Unknown",0
+"2018","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2018","Sherwood Harbor","CHN","Winter","Wild",0.000000644042320353477
+"2019","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000321320192113944
+"2019","Chipps Island","CHN","Not_SpringWinter","Unknown",0
+"2019","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2019","Chipps Island","CHN","Not_SpringWinter","Wild",0.0000796936451717206
+"2019","Chipps Island","CHN","Spring","Marked_Total",0.0000071791164060526
+"2019","Chipps Island","CHN","Spring","Unknown",0
+"2019","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2019","Chipps Island","CHN","Spring","Wild",0.0000331399726261952
+"2019","Chipps Island","CHN","Winter","Marked_Total",0.00000127805677963789
+"2019","Chipps Island","CHN","Winter","Unknown",0
+"2019","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2019","Chipps Island","CHN","Winter","Wild",0.00000209612498034378
+"2019","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.000000309511860519973
+"2019","Mossdale","CHN","Not_SpringWinter","Unknown",0
+"2019","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2019","Mossdale","CHN","Not_SpringWinter","Wild",0.0000274625251711909
+"2019","Mossdale","CHN","Spring","Marked_Total",0.000000357426220785619
+"2019","Mossdale","CHN","Spring","Unknown",0
+"2019","Mossdale","CHN","Spring","Unmarked_Total",0
+"2019","Mossdale","CHN","Spring","Wild",0.00000960762617646548
+"2019","Mossdale","CHN","Winter","Marked_Total",0
+"2019","Mossdale","CHN","Winter","Unknown",0
+"2019","Mossdale","CHN","Winter","Unmarked_Total",0
+"2019","Mossdale","CHN","Winter","Wild",0.000000235398375598115
+"2019","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.000025081237183634
+"2019","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
+"2019","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2019","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.000186242186690255
+"2019","Sherwood Harbor","CHN","Spring","Marked_Total",0.0000131208493991674
+"2019","Sherwood Harbor","CHN","Spring","Unknown",0
+"2019","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2019","Sherwood Harbor","CHN","Spring","Wild",0.0000348905797169925
+"2019","Sherwood Harbor","CHN","Winter","Marked_Total",0.00000161309265114253
+"2019","Sherwood Harbor","CHN","Winter","Unknown",0
+"2019","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2019","Sherwood Harbor","CHN","Winter","Wild",0.00000606191017848226
+"2020","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000236575460149647
+"2020","Chipps Island","CHN","Not_SpringWinter","Unknown",0
+"2020","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2020","Chipps Island","CHN","Not_SpringWinter","Wild",0.0000214747324938027
+"2020","Chipps Island","CHN","Spring","Marked_Total",0.00000192027755784811
+"2020","Chipps Island","CHN","Spring","Unknown",0
+"2020","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2020","Chipps Island","CHN","Spring","Wild",0.0000390724794233552
+"2020","Chipps Island","CHN","Winter","Marked_Total",0.000000872868861136014
+"2020","Chipps Island","CHN","Winter","Unknown",0
+"2020","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2020","Chipps Island","CHN","Winter","Wild",0.00000360096557818057
+"2020","Mossdale","CHN","Not_SpringWinter","Marked_Total",0
+"2020","Mossdale","CHN","Not_SpringWinter","Unknown",0
+"2020","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2020","Mossdale","CHN","Not_SpringWinter","Wild",0.000000228417138580421
+"2020","Mossdale","CHN","Spring","Marked_Total",0.000000205612806828318
+"2020","Mossdale","CHN","Spring","Unknown",0
+"2020","Mossdale","CHN","Spring","Unmarked_Total",0
+"2020","Mossdale","CHN","Spring","Wild",0
+"2020","Mossdale","CHN","Winter","Marked_Total",0
+"2020","Mossdale","CHN","Winter","Unknown",0
+"2020","Mossdale","CHN","Winter","Unmarked_Total",0
+"2020","Mossdale","CHN","Winter","Wild",0
+"2020","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000267962818037473
+"2020","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
+"2020","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2020","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.0000914841243768193
+"2020","Sherwood Harbor","CHN","Spring","Marked_Total",0.00000945656857157026
+"2020","Sherwood Harbor","CHN","Spring","Unknown",0
+"2020","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2020","Sherwood Harbor","CHN","Spring","Wild",0.0000570294032888668
+"2020","Sherwood Harbor","CHN","Winter","Marked_Total",0.000000791495690297888
+"2020","Sherwood Harbor","CHN","Winter","Unknown",0
+"2020","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2020","Sherwood Harbor","CHN","Winter","Wild",0.00000366963084988962
+"2021","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000201559608383394
+"2021","Chipps Island","CHN","Not_SpringWinter","Unknown",0
+"2021","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2021","Chipps Island","CHN","Not_SpringWinter","Wild",0.0000334425329543191
+"2021","Chipps Island","CHN","Spring","Marked_Total",0.00000138055260213236
+"2021","Chipps Island","CHN","Spring","Unknown",0
+"2021","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2021","Chipps Island","CHN","Spring","Wild",0.0000328299597853306
+"2021","Chipps Island","CHN","Winter","Marked_Total",0.000000430396697365488
+"2021","Chipps Island","CHN","Winter","Unknown",0
+"2021","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2021","Chipps Island","CHN","Winter","Wild",0.000000967901441431773
+"2021","Mossdale","CHN","Not_SpringWinter","Marked_Total",0
+"2021","Mossdale","CHN","Not_SpringWinter","Unknown",0
+"2021","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2021","Mossdale","CHN","Not_SpringWinter","Wild",0.0000105905525056538
+"2021","Mossdale","CHN","Spring","Marked_Total",0
+"2021","Mossdale","CHN","Spring","Unknown",0
+"2021","Mossdale","CHN","Spring","Unmarked_Total",0
+"2021","Mossdale","CHN","Spring","Wild",0.00000104942570700556
+"2021","Mossdale","CHN","Winter","Marked_Total",0
+"2021","Mossdale","CHN","Winter","Unknown",0
+"2021","Mossdale","CHN","Winter","Unmarked_Total",0
+"2021","Mossdale","CHN","Winter","Wild",0
+"2021","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.00000649667183088692
+"2021","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
+"2021","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2021","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.0000246645751824585
+"2021","Sherwood Harbor","CHN","Spring","Marked_Total",0.00000129359363954665
+"2021","Sherwood Harbor","CHN","Spring","Unknown",0
+"2021","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2021","Sherwood Harbor","CHN","Spring","Wild",0.0000103024826825236
+"2021","Sherwood Harbor","CHN","Winter","Marked_Total",0.000000198770860571098
+"2021","Sherwood Harbor","CHN","Winter","Unknown",0
+"2021","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2021","Sherwood Harbor","CHN","Winter","Wild",0.000000469468257059672
+"2022","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000151041379661503
+"2022","Chipps Island","CHN","Not_SpringWinter","Unknown",0
+"2022","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2022","Chipps Island","CHN","Not_SpringWinter","Wild",0.0000255046310677336
+"2022","Chipps Island","CHN","Spring","Marked_Total",0.000000164796439762989
+"2022","Chipps Island","CHN","Spring","Unknown",0
+"2022","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2022","Chipps Island","CHN","Spring","Wild",0.0000142776571969752
+"2022","Chipps Island","CHN","Winter","Marked_Total",0.000000374585115387702
+"2022","Chipps Island","CHN","Winter","Unknown",0
+"2022","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2022","Chipps Island","CHN","Winter","Wild",0.000000212374264692766
+"2022","Mossdale","CHN","Not_SpringWinter","Marked_Total",0
+"2022","Mossdale","CHN","Not_SpringWinter","Unknown",0
+"2022","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2022","Mossdale","CHN","Not_SpringWinter","Wild",0.00000288751584506071
+"2022","Mossdale","CHN","Spring","Marked_Total",0.000000269979668231218
+"2022","Mossdale","CHN","Spring","Unknown",0
+"2022","Mossdale","CHN","Spring","Unmarked_Total",0
+"2022","Mossdale","CHN","Spring","Wild",0.00000200585625329791
+"2022","Mossdale","CHN","Winter","Marked_Total",0
+"2022","Mossdale","CHN","Winter","Unknown",0
+"2022","Mossdale","CHN","Winter","Unmarked_Total",0
+"2022","Mossdale","CHN","Winter","Wild",0
+"2022","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.00000536707485500503
+"2022","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
+"2022","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2022","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.00000985070894310156
+"2022","Sherwood Harbor","CHN","Spring","Marked_Total",0.000000613728917420904
+"2022","Sherwood Harbor","CHN","Spring","Unknown",0
+"2022","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2022","Sherwood Harbor","CHN","Spring","Wild",0.00000885224530092874
+"2022","Sherwood Harbor","CHN","Winter","Marked_Total",0.000000195904659150112
+"2022","Sherwood Harbor","CHN","Winter","Unknown",0
+"2022","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2022","Sherwood Harbor","CHN","Winter","Wild",0.00000156926505120478
+"2023","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000280844179013434
+"2023","Chipps Island","CHN","Not_SpringWinter","Unknown",0
+"2023","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2023","Chipps Island","CHN","Not_SpringWinter","Wild",0.0000894718925960761
+"2023","Chipps Island","CHN","Spring","Marked_Total",0.0000175947854345833
+"2023","Chipps Island","CHN","Spring","Unknown",0
+"2023","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2023","Chipps Island","CHN","Spring","Wild",0.0000333695439220816
+"2023","Chipps Island","CHN","Winter","Marked_Total",0.00000221022949953798
+"2023","Chipps Island","CHN","Winter","Unknown",0
+"2023","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2023","Chipps Island","CHN","Winter","Wild",0.00000180490091704042
+"2023","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.000000213447077171924
+"2023","Mossdale","CHN","Not_SpringWinter","Unknown",0
+"2023","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2023","Mossdale","CHN","Not_SpringWinter","Wild",0.0000163016106448776
+"2023","Mossdale","CHN","Spring","Marked_Total",0.00000062396988569812
+"2023","Mossdale","CHN","Spring","Unknown",0
+"2023","Mossdale","CHN","Spring","Unmarked_Total",0
+"2023","Mossdale","CHN","Spring","Wild",0.00000439845637091808
+"2023","Mossdale","CHN","Winter","Marked_Total",0
+"2023","Mossdale","CHN","Winter","Unknown",0
+"2023","Mossdale","CHN","Winter","Unmarked_Total",0
+"2023","Mossdale","CHN","Winter","Wild",0
+"2023","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000224472016557057
+"2023","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
+"2023","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2023","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.0000796605332209074
+"2023","Sherwood Harbor","CHN","Spring","Marked_Total",0.0000340714882412527
+"2023","Sherwood Harbor","CHN","Spring","Unknown",0
+"2023","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2023","Sherwood Harbor","CHN","Spring","Wild",0.0000165588949576123
+"2023","Sherwood Harbor","CHN","Winter","Marked_Total",0.00000220714940962145
+"2023","Sherwood Harbor","CHN","Winter","Unknown",0
+"2023","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2023","Sherwood Harbor","CHN","Winter","Wild",0.00000138838911182054
+"2024","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000241130392924078
+"2024","Chipps Island","CHN","Not_SpringWinter","Unknown",0
+"2024","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2024","Chipps Island","CHN","Not_SpringWinter","Wild",0.0000452988413693963
+"2024","Chipps Island","CHN","Spring","Marked_Total",0.00000689331591170766
+"2024","Chipps Island","CHN","Spring","Unknown",0
+"2024","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2024","Chipps Island","CHN","Spring","Wild",0.0000551199309344126
+"2024","Chipps Island","CHN","Winter","Marked_Total",0.00000239778922096942
+"2024","Chipps Island","CHN","Winter","Unknown",0
+"2024","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2024","Chipps Island","CHN","Winter","Wild",0.00000168588040301708
+"2024","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.000000144425727619013
+"2024","Mossdale","CHN","Not_SpringWinter","Unknown",0
+"2024","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2024","Mossdale","CHN","Not_SpringWinter","Wild",0.000077216107077608
+"2024","Mossdale","CHN","Spring","Marked_Total",0.0000024135837119492
+"2024","Mossdale","CHN","Spring","Unknown",0
+"2024","Mossdale","CHN","Spring","Unmarked_Total",0
+"2024","Mossdale","CHN","Spring","Wild",0.0000322843103928783
+"2024","Mossdale","CHN","Winter","Marked_Total",0
+"2024","Mossdale","CHN","Winter","Unknown",0
+"2024","Mossdale","CHN","Winter","Unmarked_Total",0
+"2024","Mossdale","CHN","Winter","Wild",0.00000065306560288915
+"2024","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000392954250434605
+"2024","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
+"2024","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2024","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.000233693979187076
+"2024","Sherwood Harbor","CHN","Spring","Marked_Total",0.0000218140137201764
+"2024","Sherwood Harbor","CHN","Spring","Unknown",0
+"2024","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2024","Sherwood Harbor","CHN","Spring","Wild",0.0000534610637479712
+"2024","Sherwood Harbor","CHN","Winter","Marked_Total",0.00000138772594920764
+"2024","Sherwood Harbor","CHN","Winter","Unknown",0
+"2024","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2024","Sherwood Harbor","CHN","Winter","Wild",0.00000282074564243505
+"2025","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000124543698401685
+"2025","Chipps Island","CHN","Not_SpringWinter","Unknown",0
+"2025","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2025","Chipps Island","CHN","Not_SpringWinter","Wild",0.0000341922233513056
+"2025","Chipps Island","CHN","Spring","Marked_Total",0.00000225144166611902
+"2025","Chipps Island","CHN","Spring","Unknown",0
+"2025","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2025","Chipps Island","CHN","Spring","Wild",0.0000132802973902406
+"2025","Chipps Island","CHN","Winter","Marked_Total",0.00000203922585877526
+"2025","Chipps Island","CHN","Winter","Unknown",0
+"2025","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2025","Chipps Island","CHN","Winter","Wild",0.00000113261429407362
+"2025","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.000000833294927682526
+"2025","Mossdale","CHN","Not_SpringWinter","Unknown",0
+"2025","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2025","Mossdale","CHN","Not_SpringWinter","Wild",0.0000260810279494029
+"2025","Mossdale","CHN","Spring","Marked_Total",0.0000162876025265211
+"2025","Mossdale","CHN","Spring","Unknown",0
+"2025","Mossdale","CHN","Spring","Unmarked_Total",0
+"2025","Mossdale","CHN","Spring","Wild",0.0000054750692209154
+"2025","Mossdale","CHN","Winter","Marked_Total",0
+"2025","Mossdale","CHN","Winter","Unknown",0
+"2025","Mossdale","CHN","Winter","Unmarked_Total",0
+"2025","Mossdale","CHN","Winter","Wild",0.000000049350246865907
+"2025","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000795261041983645
+"2025","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
+"2025","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2025","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.000348308851662225
+"2025","Sherwood Harbor","CHN","Spring","Marked_Total",0.0000103503294067889
+"2025","Sherwood Harbor","CHN","Spring","Unknown",0
+"2025","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2025","Sherwood Harbor","CHN","Spring","Wild",0.0000343333528115805
+"2025","Sherwood Harbor","CHN","Winter","Marked_Total",0.00000323814261324092
+"2025","Sherwood Harbor","CHN","Winter","Unknown",0
+"2025","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2025","Sherwood Harbor","CHN","Winter","Wild",0.00000793874826892619
+"2026","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000101726936363547
+"2026","Chipps Island","CHN","Not_SpringWinter","Unknown",0
+"2026","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
+"2026","Chipps Island","CHN","Not_SpringWinter","Wild",0.00000946716581446498
+"2026","Chipps Island","CHN","Spring","Marked_Total",0.00000131714158653588
+"2026","Chipps Island","CHN","Spring","Unknown",0
+"2026","Chipps Island","CHN","Spring","Unmarked_Total",0
+"2026","Chipps Island","CHN","Spring","Wild",0.0000240018515426645
+"2026","Chipps Island","CHN","Winter","Marked_Total",0.00000187348995726747
+"2026","Chipps Island","CHN","Winter","Unknown",0
+"2026","Chipps Island","CHN","Winter","Unmarked_Total",0
+"2026","Chipps Island","CHN","Winter","Wild",0.0000067749969491109
+"2026","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.000000204460909653857
+"2026","Mossdale","CHN","Not_SpringWinter","Unknown",0
+"2026","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
+"2026","Mossdale","CHN","Not_SpringWinter","Wild",0.0000045441451124651
+"2026","Mossdale","CHN","Spring","Marked_Total",0.00000618099108860641
+"2026","Mossdale","CHN","Spring","Unknown",0
+"2026","Mossdale","CHN","Spring","Unmarked_Total",0
+"2026","Mossdale","CHN","Spring","Wild",0.0000091183555920866
+"2026","Mossdale","CHN","Winter","Marked_Total",0
+"2026","Mossdale","CHN","Winter","Unknown",0
+"2026","Mossdale","CHN","Winter","Unmarked_Total",0
+"2026","Mossdale","CHN","Winter","Wild",0.000000333090589961608
+"2026","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000223150872472125
+"2026","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
+"2026","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
+"2026","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.000218307005217393
+"2026","Sherwood Harbor","CHN","Spring","Marked_Total",0.00000605935442955866
+"2026","Sherwood Harbor","CHN","Spring","Unknown",0
+"2026","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
+"2026","Sherwood Harbor","CHN","Spring","Wild",0.0000722636532911275
+"2026","Sherwood Harbor","CHN","Winter","Marked_Total",0.00000685584743858844
+"2026","Sherwood Harbor","CHN","Winter","Unknown",0
+"2026","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
+"2026","Sherwood Harbor","CHN","Winter","Wild",0.0000364557531296006
