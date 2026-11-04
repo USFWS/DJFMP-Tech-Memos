@@ -14,7 +14,7 @@ fieldyear <- 2026
 SacSeineStart <- 3
 SacSeineStop <- 6
 
-this_out_root <- file.path("\\\\ifwaz8lodifs.file.core.windows.net\\edrive\\Common\\IEP\\rdbms\\DJFMP\\Annual Report\\DJFMP Annual Salmonid Report\\Data\\2026")
+this_out_root <- file.path("2026_R_code/Salmon and Nearshore reports/Data/2026")
 
 
 
@@ -410,7 +410,7 @@ p_annual_ChippsBay <- create_annual_plot(dat=all_Annual_Means, area="Chipps_Bay"
 # https://www.usbr.gov/mp/cvo/vungvari/Ccgates.pdf
 
 # File with daily log:
-DCC <- read.csv(paste0(this_out_root,"/","DCC",fieldyear,".csv"), header=TRUE)
+DCC <- read.csv(paste0(this_out_root,"/DCC/","DCC",fieldyear,".csv"), header=TRUE)
 
 # DCC$Date <- as.Date(DCC$Date, format="%Y-%m-%d") Original
 as.Date(DCC$Date, tryFormats = c("%m-%d-%Y", "%m/%d/%Y", "%Y-%m-%d"))
@@ -452,8 +452,8 @@ p_DCC <- ggplot(DCC, aes(x=Month_f, y=Percent_Close)) +
 
 
 ## Save figures:
-setwd("M:\\IEP\\rdbms\\DJFMP\\Annual Report\\DJFMP Annual Salmonid Report")
-png(paste0("Data\\",fieldyear,"\\","Fig 2.Sac Delta Entry.png"), units="in", 
+#setwd("/Annual Report/DJFMP Annual Salmonid Report")
+png(paste0(this_out_root, "/","Fig 2.Sac Delta Entry.png"), units="in", 
     width=9.2, height=6, res=500)
 p_monthly_Sac
 dev.off()
@@ -469,37 +469,37 @@ library(ggplot2)
 library(ragg)
 
 ggsave(
-  filename = paste0("Data\\", fieldyear, "\\", "Fig 3.Delta Cross Channel.png"),
+  filename = paste0(this_out_root, "/","Fig 3.Delta Cross Channel.png"),
   plot = p_DCC,
   width = 3.5, height = 2.5, dpi = 500,
   device = ragg::agg_png  # or device = cairo_png from {Cairo}
 )
 
-png(paste0("Data\\",fieldyear,"\\","Fig 4.SJ Delta Entry.png"), units="in", 
+png(paste0(this_out_root, "/","Fig 4.SJ Delta Entry.png"), units="in", 
     width=7, height=4.4, res=500)
 p_monthly_SJ
 dev.off()
 
 
-png(paste0("Data\\",fieldyear,"\\","Fig 5.Delta Seines.png"), units="in", 
+png(paste0(this_out_root, "/","Fig 5.Delta Seines.png"), units="in", 
     width=9, height=6, res=500)
 p_monthly_Delta
 dev.off()
 
 
-png(paste0("Data\\",fieldyear,"\\","Fig 6.Annual Delta.png"), units="in", 
+png(paste0(this_out_root, "/","Fig 6.Annual Delta.png"), units="in", 
     width=9.5, height=6, res=500)
 p_annual_Delta
 dev.off()
 
 
-png(paste0("Data\\",fieldyear,"\\","Fig 7.Delta Exit.png"), units="in", 
+png(paste0(this_out_root, "/","Fig 7.Delta Exit.png"), units="in", 
     width=9, height=5, res=500)
 p_monthly_ChippsBay
 dev.off()
 
 
-png(paste0("Data\\",fieldyear,"\\","Fig 8.Annual Delta Exit.png"), units="in", 
+png(paste0(this_out_root, "/","Fig 8.Annual Delta Exit.png"), units="in", 
     width=9.5, height=5, res=500)
 p_annual_ChippsBay
 dev.off()
