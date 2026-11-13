@@ -1,5 +1,5 @@
 ## Original author: Christian Gredzens, 2023-07-19
-## Minor updates: L Mitchell, 2026-01-27
+## Minor updates: L Mitchell, 2026-01-27; L Yamane 2026-11-5
 
 ################################################################################
 #STEP 2: Load Required Packages, Clear Environment, Assign Data Ranges 
@@ -11,7 +11,7 @@ lapply(names(sessionInfo()$otherPkgs), function(pkgs) detach(paste0('package:', 
 #-------------------------------------------------------------------------------
 # Packages
 #-------------------------------------------------------------------------------
-library(odbc) # database functions
+# library(odbc) # database functions
 library(tidyverse) # tidy core functions
 library(plotrix) # standard error calculations
 library(gridExtra) # paneled graphics functions
@@ -45,71 +45,38 @@ Fishies <- c("AMS", "BGS", "BKB", "BKS", "C", "CHC", "CHN", "DSM", "GF", "GSF", 
 set.seed(123)
 
 
-#Import Data from Denver Database
+#Import Data from EDI publications
 ################################################################################
 # Step 3: Import Data From Denver Database
 ################################################################################
 
-# Connect to Denver Database
-# LY: removed server and database connection username/passwords.  
-# Will replace with EDI published datasets shortly
+# To get the data for this R script, access the following EDI data package: 
+# https://portal.edirepository.org/nis/mapbrowse?packageid=edi.244.17
+# Select the following data entities for Download, and save them in the same folder as the script:
+# 1. 1976-2001_DJFMP_trawl_fish_and_water_quality_data.csv (Samples, Catch)
+# 2. 2002-2026_DJFMP_trawl_fish_and_water_quality_data.csv (Samples, Catch)
+# 3. 1976-2026_DJFMP_beach_seine_fish_and_water_quality_data.csv  (Samples, Catch)
+# 4. DJFMP_Fish_Taxonomy.csv (Organisms)
+# 5. DJFMP_Site_Locations.csv (Stations)
+# We will use 3-4 for this script
 
+#################### Import Data from EDI publication - new #########################
+wd <- "C:/Users/lyamane/OneDrive - DOI/Documents/R/DJFMP"
+data_dir <- "/Data/2026/edi.244.17/"
 
-# Pull in sample data tables from database
-Sample_Table <- gsub("[\r\n]"," ", sprintf("SELECT * FROM Sample WHERE SampleDate BETWEEN '%s' AND '%s';", 
-                                           date_start, date_end))
+sample_catch_beach_seine <- read.csv(file.path(paste0(wd,data_dir,"1976-2026_DJFMP_beach_seine_fish_and_water_quality_data_SID.csv"))) %>%
+  filter(SampleDate >= date_start, SampleDate <= date_end)
 
-Samples <- DBI::dbGetQuery(conn = DJFMP_Database_Con, 
-                           statement = Sample_Table)
-
-# Seine regions
-Station_Code_Table <- "SELECT * FROM ref_station_code;"
-Stations <- DBI::dbGetQuery(conn = DJFMP_Database_Con, 
-                            statement = Station_Code_Table)
-
-# Import catch data
-Catch_Table <- "SELECT * FROM Catch;"
-Catch <- DBI::dbGetQuery(conn = DJFMP_Database_Con, 
-                         statement = Catch_Table)
-
-# Import common names of species
-Organism_Code_Table <- "SELECT * FROM ref_organism_code;"
-Organisms <- DBI::dbGetQuery(conn = DJFMP_Database_Con,
-                             statement = Organism_Code_Table)
-
-Organisms <- Organisms %>% rename("OrganismCode" = organism_code)
-
-# Disconnect from Denver Database
-dbDisconnect(DJFMP_Database_Con)
-
-# Remove database and unneeded vectors to clean up environment
-rm(list = setdiff(ls(), c("Catch", "Organisms", "Samples", "Stations", "Fishies", "calendaryr")))
-
+Organisms <- read_csv("2026_R_code/Salmon and Nearshore reports/Data/2026/DJFMP_Fish_Taxonomy.csv")
 
 #Create Sample Data
 ################################################################################
 # Step 4: Merge and Filter Datasets
 ################################################################################
 
-#-------------------------------------------------------------------------------
-# Effort
-#-------------------------------------------------------------------------------
-
-Stations <- Stations %>%
-  rename("StationCode" = station_code)
-
-Effort_combined <- left_join(Samples, Stations, by="StationCode")
-
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# Diagnostic: QC row Counts before and after join of sample and station data
-as.numeric(count(Samples))
-as.numeric(count(Effort_combined)) # Looks good (271038/271038)
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Effort <- Effort_combined %>%
+sample_catch_beach_seine <- sample_catch_beach_seine %>%
 # Filter to only seine sites and remove selected stations (e.g., Liberty Island, inconsistent sampling, etc.)
-  filter(MethodCode == "SEIN", 
-         !(StationCode %in% c("CR005S", "SR060AH", "SR144AH", "OR001X", "PR001W", 
+  filter(!(StationCode %in% c("CR005S", "SR060AH", "SR144AH", "OR001X", "PR001W", 
                               "VC002N", "TC002E", "SP000E", "SJ063E", "SJ065W", "SJ070N",
                               "SJ072E", "SJ075E", "SJ087W", "SR015E", "SR163W", "SR184E",
                               "SR119E", "SJ074A", "SJ076W", "SJ079E", "SR055AH", "LI001E", 
@@ -127,7 +94,7 @@ Effort <- Effort_combined %>%
          SeineLength >= 2 & SeineLength <= 15 & 
 					SeineWidth >= 3 & SeineWidth <= 15 & 
           SeineDepth >= 0.2 & SeineDepth <= 1.5) %>%
-  rename("Location" = description) %>%
+  #rename("Location" = description) %>%
   # Add Region Name column
   mutate(RegionCodeName = case_when(RegionCode %in% c("1")~"SAC River",
                                     RegionCode %in% c("2")~"North Delta",
@@ -138,8 +105,7 @@ Effort <- Effort_combined %>%
   # Remove seine sites outside of regions of interest
   filter(!is.na(RegionCodeName)) %>%
   # Parse down number of data columns to only those necessary
-  select(SampleID, Location, RegionCodeName, StationCode, SampleDate, SampleTime, 
-         GearConditionCode, SeineVolume, Month, Year) %>%
+  #select(Location, RegionCodeName, StationCode, SampleDate, SampleTime, GearConditionCode, SeineVolume, Month, Year) %>% #SampleID, 
   # Change datatype of specified columns  
   mutate_at(c("Year", "Month", "StationCode", "GearConditionCode", "RegionCodeName"), as.factor) %>%
   # unique removes duplicate rows   
@@ -147,46 +113,10 @@ Effort <- Effort_combined %>%
   # Remove any unused factor levels
   droplevels()
 
-#-------------------------------------------------------------------------------
-# Catch
-#-------------------------------------------------------------------------------
 
-Catch_Final <- Catch %>%
-  # Combine catch data with organism information
+sample_catch_beach_seine <- sample_catch_beach_seine %>%
+  select(-c(CommonName, IEPFishCode)) %>%
   left_join(Organisms, by = "OrganismCode") %>%
-  filter(OrganismCode != "NOFISH") %>%
-  # Remove SampleIDs not shared between catch and sample datasets
-  filter(SampleID %in% Effort$SampleID) %>%
-  select(SampleID, OrganismCode, description, ForkLength, Count, NonNative, Phylum, Family, Genus, Species) %>%
-  rename("CommonName" = description, "Count" = Count) %>%
-  group_by(SampleID, OrganismCode, CommonName, ForkLength, NonNative, Phylum, Family, Genus, Species) %>%
-  summarise(Count = sum(Count)) %>%
-  as.data.frame()
-
-# Merge Effort and Catch
-Catch_Data <- left_join(Effort,Catch_Final, by = "SampleID")
-
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# Diagnostic: QC catch Counts before and after join
-as.numeric(sum(Catch_Final$Count))
-as.numeric(sum(Catch_Data$Count, NA, na.rm = T)) # Looks good (3602841/3602841)
-
-# Diagnostic: Check if count of sampling events still matches earlier count (46927)
-sampling_effort <- Catch_Data %>%
-  select(SampleID, StationCode, SampleDate, Year) %>%
-  group_by(SampleID) %>%
-  unique()
-
-station_effort <- Effort %>%
-  select(SampleID, StationCode, SampleDate, Year) %>%
-  group_by(SampleID) %>%
-  unique()
-
-summary(station_effort)
-# 46927 total successful sampling events (the same, no losses)
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Catch_Data <- Catch_Data %>%
   # Convert all catch not in species list to NOFISH
   mutate(OrganismCode = ifelse(is.na(OrganismCode), "NOFISH", OrganismCode)) %>%
   mutate(CommonName = ifelse(is.na(CommonName), "No catch", CommonName)) %>%
@@ -196,7 +126,7 @@ Catch_Data <- Catch_Data %>%
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # Diagnostic: Check if invertebrates were caught with fish or not
-Catch_Other <- Catch_Data %>%
+Catch_Other <- sample_catch_beach_seine %>%
   select(SampleID, OrganismCode) %>%
   group_by(SampleID, OrganismCode) %>%
   unique() %>%
@@ -213,7 +143,7 @@ summary(Catch_Other)
 # 2730 stations when not using sample time to assign sampling, one site sampled twice in one day
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Catch_Data <- Catch_Data %>%
+Catch_Data <- sample_catch_beach_seine %>%
   # Join and replace original data with amended data from diagnostic for species of non-interest
   left_join(Catch_Other, by = c("SampleID")) %>%
   mutate(OrganismCode = coalesce(OrganismCode.y, OrganismCode.x)) %>%
@@ -267,15 +197,15 @@ Catch_CPUE <- Catch_Matrix %>%
   as.data.frame()
   
 # Create Raw Datasets
-RawCPUEData <- Effort %>%
-  left_join(Catch_CPUE, by = "SampleID")%>%
-  select(!Year.y) %>%
-  mutate_at("Year.x", as.character) %>%
-  mutate_at("Year.x", as.numeric)
-
-# Split into more manageable sizes so they can be opened in Excel
-RawCPUEData2010 <- subset(RawCPUEData, Year.x <= 2010)
-RawCPUEDataAfter2010 <- subset(RawCPUEData, Year.x > 2010)  
+# RawCPUEData <- Effort %>%
+#   left_join(Catch_CPUE, by = "SampleID")%>%
+#   select(!Year.y) %>%
+#   mutate_at("Year.x", as.character) %>%
+#   mutate_at("Year.x", as.numeric)
+# 
+# # Split into more manageable sizes so they can be opened in Excel
+# RawCPUEData2010 <- subset(RawCPUEData, Year.x <= 2010)
+# RawCPUEDataAfter2010 <- subset(RawCPUEData, Year.x > 2010)  
 
 
 # Export Raw Dataset to .CSV files

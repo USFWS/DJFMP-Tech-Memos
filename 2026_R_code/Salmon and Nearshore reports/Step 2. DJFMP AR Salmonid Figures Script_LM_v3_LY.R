@@ -41,27 +41,27 @@ library(patchwork)
 ## Read in Data ##################################################
 
 CHNcustom_Trawl_Monthly_Means_CurrentYear <- read.csv(
-  file.path(this_out_root,"CHNcustom_Trawl_Monthly_Means_CurrentYear.csv"), na.strings="")
+  file.path(this_out_root,"CHNcustom_Trawl_Monthly_Means_CurrentYear_LY.csv"), na.strings="")
 CHNcustom_SEIN_Monthly_Means_CurrentYear <- read.csv(
-  file.path(this_out_root,"CHNcustom_SEIN_Monthly_Means_CurrentYear.csv"), na.strings="")
+  file.path(this_out_root,"CHNcustom_SEIN_Monthly_Means_CurrentYear_LY.csv"), na.strings="")
 
 CHNcustom_Trawl_Annual_Means <- read.csv(
-  file.path(this_out_root,"CHNcustom_Trawl_Annual_Means.csv"), na.strings="")
+  file.path(this_out_root,"CHNcustom_Trawl_Annual_Means_LY.csv"), na.strings="")
 CHNcustom_SEIN_Annual_Means <- read.csv(
-  file.path(this_out_root,"CHNcustom_SEIN_Annual_Means.csv"), na.strings="")
+  file.path(this_out_root,"CHNcustom_SEIN_Annual_Means_LY.csv"), na.strings="")
 
 RBT_Trawl_Monthly_Means_CurrentYear <- read.csv(
-  file.path(this_out_root,"RBT_Trawl_Monthly_Means_CurrentYear.csv"), na.strings="")
+  file.path(this_out_root,"RBT_Trawl_Monthly_Means_CurrentYear_LY.csv"), na.strings="")
 RBT_SEIN_Monthly_Means_CurrentYear <- read.csv(
-  file.path(this_out_root,"RBT_SEIN_Monthly_Means_CurrentYear.csv"), na.strings="")
+  file.path(this_out_root,"RBT_SEIN_Monthly_Means_CurrentYear_LY.csv"), na.strings="")
 
 RBT_Trawl_Annual_Means <- read.csv(
-  file.path(this_out_root,"RBT_Trawl_Annual_Means.csv"), na.strings="")
+  file.path(this_out_root,"RBT_Trawl_Annual_Means_LY.csv"), na.strings="")
 RBT_SEIN_Annual_Means <- read.csv(
-  file.path(this_out_root,"RBT_SEIN_Annual_Means.csv"), na.strings="")
+  file.path(this_out_root,"RBT_SEIN_Annual_Means_LY.csv"), na.strings="")
 
-CHN_Chipps_FL <- read.csv(file.path(this_out_root,"CHN_Chipps_FL.csv"), na.strings="")
-RBT_Chipps_FL <- read.csv(file.path(this_out_root,"RBT_Chipps_FL.csv"), na.strings="")
+CHN_Chipps_FL <- read.csv(file.path(this_out_root,"CHN_Chipps_FL_LY.csv"), na.strings="")
+RBT_Chipps_FL <- read.csv(file.path(this_out_root,"RBT_Chipps_FL_LY.csv"), na.strings="")
 
 
 ## Double check that monthly means are for the selected field year:
@@ -83,7 +83,7 @@ if(any(is.na(fieldyear_check)) || any(fieldyear_check != fieldyear)) {
 Trawl_Monthly_Means_CurrentYear <- dplyr::bind_rows(
     CHNcustom_Trawl_Monthly_Means_CurrentYear, 
     RBT_Trawl_Monthly_Means_CurrentYear) %>%
-  dplyr:::mutate(Location=description) %>%
+  #dplyr:::mutate(Location=description) %>%
   dplyr::select(FieldYear, MONTH, Location, OrganismCode, CustomRaceGroup, 
                 Origin, AvgCPUE)
 
@@ -97,15 +97,22 @@ SEIN_Monthly_Means_CurrentYear <- dplyr::bind_rows(
 all_Monthly_Means_CurrentYear <- dplyr::bind_rows(Trawl_Monthly_Means_CurrentYear,
                                                   SEIN_Monthly_Means_CurrentYear)
 
-# LY: let's restrict monthly means to only include all_Monthly_Means_CurrentYear$Origin %in% c(""Marked_Total","Wild","Marked_Count")
-all_Monthly_Means_CurrentYear <- all_Monthly_Means_CurrentYear %>%
-  dplyr::filter(Origin %in% c("Marked_Total","Wild","Marked_Count"))
+# LY: let's add "Wild" and "Unmarked_Total" together and call it "Unmarked"
+all_Monthly_Means_CurrentYear2 <- all_Monthly_Means_CurrentYear %>% 
+  dplyr::mutate(Origin = ifelse(Origin %in% c("Wild", "Unmarked_Total"), "Unmarked", 
+                                   Origin)) %>%
+  group_by(FieldYear, MONTH, Location, OrganismCode, CustomRaceGroup, Origin) %>%
+  summarise(AvgCPUE = sum(AvgCPUE), .groups = "drop")
+
+# LY: let's restrict monthly means to only include all_Monthly_Means_CurrentYear$Origin %in% c("Marked_Total","Unmarked","Marked_Count")
+all_Monthly_Means_CurrentYear2 <- all_Monthly_Means_CurrentYear2 %>%
+  dplyr::filter(Origin %in% c("Marked_Total","Unmarked","Marked_Count")) #CPUE for Unknown in this dataset is 0, so ignore
 
 ## And similarly for annual data:
 
 Trawl_Annual_Means <- dplyr::bind_rows(CHNcustom_Trawl_Annual_Means, 
                                        RBT_Trawl_Annual_Means) %>%
-  dplyr:::mutate(Location=description) %>%
+  #dplyr:::mutate(Location=description) %>%
   dplyr::select(FieldYear, Location, OrganismCode, CustomRaceGroup, 
                 Origin, AvgCPUE)
 
@@ -118,9 +125,18 @@ SEIN_Annual_Means <- dplyr::bind_rows(CHNcustom_SEIN_Annual_Means,
 all_Annual_Means <- dplyr::bind_rows(Trawl_Annual_Means,
                                      SEIN_Annual_Means)
 
+# LY: let's add "Wild" and "Unmarked_Total" together and call it "Unmarked"
+all_Annual_Means2 <- all_Annual_Means %>% 
+  dplyr::mutate(Origin = ifelse(Origin %in% c("Wild", "Unmarked_Total"), "Unmarked", 
+                                Origin)) %>%
+  group_by(FieldYear,Location,OrganismCode,CustomRaceGroup,Origin) %>%
+  summarise(AvgCPUE = sum(AvgCPUE), .groups = "drop")
+
 # LY: again, let's restrict monthly means to only include all_Monthly_Means_CurrentYear$Origin %in% c(""Marked_Total","Wild","Marked_Count")
-all_Annual_Means <- all_Annual_Means %>%
-  dplyr::filter(Origin %in% c("Marked_Total","Wild","Marked_Count"))
+all_Annual_Means2 <- all_Annual_Means2 %>%
+  dplyr::filter(Origin %in% c("Marked_Total","Unmarked","Marked_Count"))
+
+
 
 ## Clean up labels for plotting:
 
@@ -131,9 +147,9 @@ all_Annual_Means <- all_Annual_Means %>%
 #                           "Unknown"="Unknown")
 
 # LY change
-formatted_origin_map <- c("Marked_Total"="Hatchery",
-                          "Marked_Count"="Hatchery", 
-                          "Wild"="Wild")
+formatted_origin_map <- c("Marked_Total"="Marked",
+                          "Marked_Count"="Marked", 
+                          "Unmarked"="Unmarked")
 
 formatted_location_method_map <- c(
   "region_1"="Lower Sacramento Seine\n(Region 1)",
@@ -165,7 +181,7 @@ area_map <- c("region_1"="Sac",
               "region_6"="Chipps_Bay")
 
 
-all_Monthly_Means_CurrentYear <- all_Monthly_Means_CurrentYear %>%
+all_Monthly_Means_CurrentYear2 <- all_Monthly_Means_CurrentYear2 %>%
   dplyr::mutate(Species=paste0(OrganismCode, 
                                ifelse(is.na(CustomRaceGroup), "", 
                                       paste0("_",CustomRaceGroup))),
@@ -183,7 +199,7 @@ all_Monthly_Means_CurrentYear <- all_Monthly_Means_CurrentYear %>%
                                     ordered=TRUE))
 
 
-all_Annual_Means <- all_Annual_Means %>%
+all_Annual_Means2 <- all_Annual_Means2 %>%
   dplyr::mutate(Species=paste0(OrganismCode, 
                                ifelse(is.na(CustomRaceGroup), "", 
                                       paste0("_",CustomRaceGroup))),
@@ -216,9 +232,9 @@ custom_report_theme <- theme_bw() +
 
 # LY changes
 #use_colors <- c("Marked Hatchery"="black", "Unmarked Hatchery"="#E69F00", "Wild"="#56B4E9", "Unknown"="#F0E442") 
-use_colors <- c("Hatchery"="black", "Wild"="#56B4E9") 
+use_colors <- c("Marked"="black", "Unmarked"="#56B4E9") 
 #use_shapes <- c("Marked Hatchery"=21, "Unmarked Hatchery"=22,"Wild"=24, "Unknown"=25)
-use_shapes <- c("Hatchery"=21, "Wild"=24) #pch
+use_shapes <- c("Marked"=21, "Unmarked"=24) #pch
 
 
 # Figure 2. Timing of Salmonids Upstream of Delta Cross Channel -------------------------------------------------------------
@@ -317,10 +333,10 @@ create_monthly_plot <- function(dat, area) {
   return(p_final)
 }
 
-p_monthly_Sac <- create_monthly_plot(dat=all_Monthly_Means_CurrentYear, area="Sac")
-p_monthly_SJ <- create_monthly_plot(dat=all_Monthly_Means_CurrentYear, area="SJ")
-p_monthly_Delta <- create_monthly_plot(dat=all_Monthly_Means_CurrentYear, area="Delta")
-p_monthly_ChippsBay <- create_monthly_plot(dat=all_Monthly_Means_CurrentYear, 
+p_monthly_Sac <- create_monthly_plot(dat=all_Monthly_Means_CurrentYear2, area="Sac")
+p_monthly_SJ <- create_monthly_plot(dat=all_Monthly_Means_CurrentYear2, area="SJ")
+p_monthly_Delta <- create_monthly_plot(dat=all_Monthly_Means_CurrentYear2, area="Delta")
+p_monthly_ChippsBay <- create_monthly_plot(dat=all_Monthly_Means_CurrentYear2, 
                                            area="Chipps_Bay")
 
 
@@ -398,8 +414,8 @@ create_annual_plot <- function(dat, area) {
   return(p_final)
 }
 
-p_annual_Delta <- create_annual_plot(dat=all_Annual_Means, area="Delta")
-p_annual_ChippsBay <- create_annual_plot(dat=all_Annual_Means, area="Chipps_Bay")
+p_annual_Delta <- create_annual_plot(dat=all_Annual_Means2, area="Delta")
+p_annual_ChippsBay <- create_annual_plot(dat=all_Annual_Means2, area="Chipps_Bay")
 
 
 
