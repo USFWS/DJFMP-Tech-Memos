@@ -59,7 +59,7 @@ sample_catch_beach_seine <- read.csv(file.path(paste0(wd,data_dir,"1976-2026_DJF
 
 # Pull in corrected CWT tag codes before 2014
 
-CWT_codes <- read.csv(file="DJFMP/Data/Corrected_CWT_codes.csv", 
+CWT_codes <- read.csv(file="../DJFMP/Data/Corrected_CWT_codes.csv", 
                       header=TRUE)
 
 
@@ -131,7 +131,7 @@ SEINEffortFieldYear <- sample_catch_beach_seine2 %>% ##used for plotting unknown
 
 # Pull in corrected CWT tag codes before 2014
 
-CWT_codes <- read.csv(file="Data/Corrected_CWT_codes.csv", 
+CWT_codes <- read.csv(file="2026_R_code/Salmon and Nearshore reports/Data/Corrected_CWT_codes.csv", 
                       header=TRUE)
 
 # Format CWT Data---------------------------------------------------------------
@@ -141,7 +141,7 @@ library(readxl)
 library(dplyr)
 library(purrr)
 
-cwt_path <- file.path("Data", fieldyear, "All_CA-CWT_Newest.xlsx")
+cwt_path <- file.path("2026_R_code", "Salmon and Nearshore reports", "Data", fieldyear, "All_CA-CWT_Newest.xlsx")
 
 # 1. Read all 48 columns as text
 CWT <- read_xlsx(
@@ -214,26 +214,31 @@ CWT <- CWT %>%
   # RaceByTag (dbo_CodeWireTag)---field used before 2014
   # RaceByTag (dbo_Catch)---field used after 2014
 
-SalmonidCatch <- subset(Catch, OrganismCode %in% c("CHN","RBT"))
+#LY: Combine BS and trawl datasets together
+bs <- sample_catch_beach_seine2 %>%
+  mutate(Secchi = NA, TowNumber = NA)
+# format trawl data date
+sample_catch_trawl2 <- sample_catch_trawl2 %>%
+  mutate(SampleDate = as.Date(SampleDate))
 
-SalmonidCatch <- SalmonidCatch %>% filter(SampleID %in% Effort$SampleID)
+Catch_effort <- bind_rows(sample_catch_trawl2, bs)
+SalmonidCatch <- subset(Catch_effort, OrganismCode %in% c("CHN","RBT"))
 
 # Split Catch up into pre and post 2014 CWT and non-CWT fish
 SalmonidCatchAfter2014 <- SalmonidCatch %>%
-  filter(SampleID %in% AfterFY2014$SampleID) %>%
-  select(SampleID, OrganismCode, MarkCode, StageCode, TagCode, RaceByTag, RaceByLength,
-         ForkLength, Count)
+  #filter(SampleID %in% AfterFY2014$SampleID) %>%
+  filter(SampleDate > ymd("2014-05-12")) %>%
+  select(SampleID, SampleDate, SampleTime, StationCode, TowNumber, OrganismCode, MarkCode, StageCode, TagCode, RaceByTag, RaceByLength,ForkLength, Count)
 
 CWTCatchBefore2014 <- SalmonidCatch %>%
-  filter(SampleID %in% BeforeFY2014$SampleID) %>%
-  filter(!MarkCode %in% c("none","None") & OrganismCode %in% c("CHN","RBT")) %>%
-  select(SampleID, OrganismCode, MarkCode, StageCode, TagCode, RaceByTag, RaceByLength,
-         ForkLength, Count)
+  filter(SampleDate <= ymd("2014-05-12")) %>%
+  filter(!MarkCode %in% c("none","None"))  %>%
+  select(SampleID,SampleDate, SampleTime, StationCode, TowNumber, OrganismCode, MarkCode, StageCode, TagCode, RaceByTag, RaceByLength, ForkLength, Count)
 
 NonCWTCatchBefore2014 <- SalmonidCatch %>%
-  filter(SampleID %in% BeforeFY2014$SampleID) %>%
-  filter(MarkCode %in% c("none","None") & OrganismCode %in% c("CHN","RBT")) %>%
-  select(SampleID, OrganismCode, MarkCode, StageCode, TagCode, RaceByTag, RaceByLength,
+  filter(SampleDate <= ymd("2014-05-12")) %>%
+  filter(MarkCode %in% c("none","None")) %>%
+  select(SampleID,SampleDate, SampleTime, StationCode, TowNumber, OrganismCode, MarkCode, StageCode, TagCode, RaceByTag, RaceByLength,
          ForkLength, Count)
 
 CWT_codes <- CWT_codes %>%
@@ -391,8 +396,8 @@ CHN_Trawl_Catch$Marked_Count_per_tagcode[is.na(CHN_Trawl_Catch$Marked_Count_per_
 CHN_Trawl_Catch$Unmarked_Count_per_tagcode[is.na(CHN_Trawl_Catch$Unmarked_Count_per_tagcode)] <- 0
 
 sample_catch_trawl2$SampleID <- as.factor(sample_catch_trawl2$SampleID)
-CHN_taggers_catch <- inner_join(subset(Trawl_effort, FieldYear == fieldyear), CHN_Trawl_Catch, by="SampleID")
-
+CHN_taggers_catch <- inner_join(subset(sample_catch_trawl2, FieldYear == fieldyear), 
+                                CHN_Trawl_Catch, by="SampleID")
 # Step 2. Subset Dataset by Races of interest------------------------------------------------------------------------------------
 
 ## Separate out Winter Run and Non-winter Run (grouped by Spring vs. all remaining 
@@ -538,7 +543,7 @@ CWT$TagCode <- as.factor(CWT$TagCode)
 CHN_SEIN_Catch <- left_join(CHN_Catch, CWT, by="TagCode")
 
 ## Add Sample Year to Catches so we can designate unknown origin Chinook in samples taken before 2008 field year
-
+SEINEffortFieldYear$SampleID <- as.factor(SEINEffortFieldYear$SampleID)
 CHN_SEIN_Catch <- inner_join(CHN_SEIN_Catch, SEINEffortFieldYear, by="SampleID")
 
 ## QC Datset and make corrections
@@ -640,11 +645,20 @@ SEIN_Effort <- sample_catch_beach_seine2 %>%
                            MONTH == 5 ~ "May", MONTH == 6 ~ "Jun", MONTH == 7 ~ "Jul")) 
 
 SEIN_Effort$MONTH <- factor(SEIN_Effort$MONTH, levels=c("Aug","Sep","Oct","Nov","Dec","Jan","Feb","Mar","Apr","May","Jun","Jul"))
-CHNcustom_SEIN_CPUE <- left_join(SEIN_Effort, CHNcustom_SEIN_Catch_Summary, 
-                               by="SampleID") %>%
+
+# limit to only effort again, so we can merge in the summary catch per sampleID
+sample_seine_only <- SEIN_Effort %>%
+  select(SampleID, FieldYear, MONTH, DAY,Location, RegionCode, StationCode, Volume, MethodCode) %>%
+  unique()
+
+sample_seine_only$SampleID <- as.factor(sample_seine_only$SampleID)
+
+CHNcustom_SEIN_CPUE <- left_join(sample_seine_only, CHNcustom_SEIN_Catch_Summary, 
+                                 by="SampleID") %>%
   select(SampleID, FieldYear, MONTH, DAY, Location, RegionCode, StationCode, Volume, 
          MethodCode, OrganismCode, CustomRaceGroup, Origin, Count) %>%
   filter(!is.na(Volume))
+
 
 ## Format Dataset
 ## Placeholder values of "CHN" and "None" for samples with no CHN:
@@ -948,7 +962,7 @@ RBT_Chipps_FL <- RBT_Chipps_FLraw %>%
 
 # Write CSV for final index output
 
-this_out_root <- file.path("Data",fieldyear)
+this_out_root <- file.path("2026_R_code", "Salmon and Nearshore reports", "Data",fieldyear)
 
 write.csv(CHNcustom_Trawl_Monthly_Means_CurrentYear, 
           file=file.path(this_out_root,"CHNcustom_Trawl_Monthly_Means_CurrentYear_LY.csv"), 

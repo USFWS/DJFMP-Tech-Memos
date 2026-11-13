@@ -1,4 +1,4 @@
-"FieldYear","MONTH","description","OrganismCode","CustomRaceGroup","Origin","AvgCPUE"
+"FieldYear","MONTH","Location","OrganismCode","CustomRaceGroup","Origin","AvgCPUE"
 "2026","Aug","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0
 "2026","Aug","Chipps Island","CHN","Not_SpringWinter","Unknown",0
 "2026","Aug","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
@@ -107,10 +107,10 @@
 "2026","Oct","Sherwood Harbor","CHN","Winter","Unknown",0
 "2026","Oct","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
 "2026","Oct","Sherwood Harbor","CHN","Winter","Wild",0
-"2026","Nov","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.00000031250508072579
+"2026","Nov","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.00000250004064580632
 "2026","Nov","Chipps Island","CHN","Not_SpringWinter","Unknown",0
 "2026","Nov","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
-"2026","Nov","Chipps Island","CHN","Not_SpringWinter","Wild",0.0000013688112337419
+"2026","Nov","Chipps Island","CHN","Not_SpringWinter","Wild",0.0000107142957910401
 "2026","Nov","Chipps Island","CHN","Spring","Marked_Total",0
 "2026","Nov","Chipps Island","CHN","Spring","Unknown",0
 "2026","Nov","Chipps Island","CHN","Spring","Unmarked_Total",0
@@ -131,22 +131,22 @@
 "2026","Nov","Mossdale","CHN","Winter","Unknown",0
 "2026","Nov","Mossdale","CHN","Winter","Unmarked_Total",0
 "2026","Nov","Mossdale","CHN","Winter","Wild",0
-"2026","Nov","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000108795714383039
+"2026","Nov","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.000310125835576008
 "2026","Nov","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
 "2026","Nov","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
-"2026","Nov","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.00000521238337273962
+"2026","Nov","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.00011547956660005
 "2026","Nov","Sherwood Harbor","CHN","Spring","Marked_Total",0
 "2026","Nov","Sherwood Harbor","CHN","Spring","Unknown",0
 "2026","Nov","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
-"2026","Nov","Sherwood Harbor","CHN","Spring","Wild",0.0000758850803486517
+"2026","Nov","Sherwood Harbor","CHN","Spring","Wild",0.00201942527130416
 "2026","Nov","Sherwood Harbor","CHN","Winter","Marked_Total",0
 "2026","Nov","Sherwood Harbor","CHN","Winter","Unknown",0
 "2026","Nov","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
-"2026","Nov","Sherwood Harbor","CHN","Winter","Wild",0.000262982070532077
-"2026","Dec","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000151113991093721
+"2026","Nov","Sherwood Harbor","CHN","Winter","Wild",0.00585776126545896
+"2026","Dec","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.000179818481578502
 "2026","Dec","Chipps Island","CHN","Not_SpringWinter","Unknown",0
 "2026","Dec","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
-"2026","Dec","Chipps Island","CHN","Not_SpringWinter","Wild",0.00000242024365695368
+"2026","Dec","Chipps Island","CHN","Not_SpringWinter","Wild",0.0000205497073333601
 "2026","Dec","Chipps Island","CHN","Spring","Marked_Total",0
 "2026","Dec","Chipps Island","CHN","Spring","Unknown",0
 "2026","Dec","Chipps Island","CHN","Spring","Unmarked_Total",0
@@ -167,19 +167,19 @@
 "2026","Dec","Mossdale","CHN","Winter","Unknown",0
 "2026","Dec","Mossdale","CHN","Winter","Unmarked_Total",0
 "2026","Dec","Mossdale","CHN","Winter","Wild",0
-"2026","Dec","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000108892465913636
+"2026","Dec","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.000306926744773396
 "2026","Dec","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
 "2026","Dec","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
-"2026","Dec","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.000149736459486224
+"2026","Dec","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.00273498205381955
 "2026","Dec","Sherwood Harbor","CHN","Spring","Marked_Total",0
 "2026","Dec","Sherwood Harbor","CHN","Spring","Unknown",0
 "2026","Dec","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
-"2026","Dec","Sherwood Harbor","CHN","Spring","Wild",0.0000391336589416805
+"2026","Dec","Sherwood Harbor","CHN","Spring","Wild",0.000833745707539794
 "2026","Dec","Sherwood Harbor","CHN","Winter","Marked_Total",0
 "2026","Dec","Sherwood Harbor","CHN","Winter","Unknown",0
 "2026","Dec","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
-"2026","Dec","Sherwood Harbor","CHN","Winter","Wild",0.000117175119696997
-"2026","Jan","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000097044205458151
+"2026","Dec","Sherwood Harbor","CHN","Winter","Wild",0.00315263673504518
+"2026","Jan","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000483030741434429
 "2026","Jan","Chipps Island","CHN","Not_SpringWinter","Unknown",0
 "2026","Jan","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
 "2026","Jan","Chipps Island","CHN","Not_SpringWinter","Wild",0
@@ -190,11 +190,11 @@
 "2026","Jan","Chipps Island","CHN","Winter","Marked_Total",0
 "2026","Jan","Chipps Island","CHN","Winter","Unknown",0
 "2026","Jan","Chipps Island","CHN","Winter","Unmarked_Total",0
-"2026","Jan","Chipps Island","CHN","Winter","Wild",0.000000864329063342884
+"2026","Jan","Chipps Island","CHN","Winter","Wild",0.00000605030344340019
 "2026","Jan","Mossdale","CHN","Not_SpringWinter","Marked_Total",0
 "2026","Jan","Mossdale","CHN","Not_SpringWinter","Unknown",0
 "2026","Jan","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
-"2026","Jan","Mossdale","CHN","Not_SpringWinter","Wild",0.00000809310184250061
+"2026","Jan","Mossdale","CHN","Not_SpringWinter","Wild",0.0000420508132468567
 "2026","Jan","Mossdale","CHN","Spring","Marked_Total",0
 "2026","Jan","Mossdale","CHN","Spring","Unknown",0
 "2026","Jan","Mossdale","CHN","Spring","Unmarked_Total",0
@@ -203,19 +203,19 @@
 "2026","Jan","Mossdale","CHN","Winter","Unknown",0
 "2026","Jan","Mossdale","CHN","Winter","Unmarked_Total",0
 "2026","Jan","Mossdale","CHN","Winter","Wild",0
-"2026","Jan","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.00000224255474635911
+"2026","Jan","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000105886032240928
 "2026","Jan","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
 "2026","Jan","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
-"2026","Jan","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.000524947438461186
+"2026","Jan","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.00486785899429834
 "2026","Jan","Sherwood Harbor","CHN","Spring","Marked_Total",0
 "2026","Jan","Sherwood Harbor","CHN","Spring","Unknown",0
 "2026","Jan","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
-"2026","Jan","Sherwood Harbor","CHN","Spring","Wild",0.0000388982780072736
+"2026","Jan","Sherwood Harbor","CHN","Spring","Wild",0.000261040612867051
 "2026","Jan","Sherwood Harbor","CHN","Winter","Marked_Total",0
 "2026","Jan","Sherwood Harbor","CHN","Winter","Unknown",0
 "2026","Jan","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
-"2026","Jan","Sherwood Harbor","CHN","Winter","Wild",0.00000357751607288336
-"2026","Feb","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.00000081237442222285
+"2026","Jan","Sherwood Harbor","CHN","Winter","Wild",0.0000268333080798286
+"2026","Feb","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.00000259003376202811
 "2026","Feb","Chipps Island","CHN","Not_SpringWinter","Unknown",0
 "2026","Feb","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
 "2026","Feb","Chipps Island","CHN","Not_SpringWinter","Wild",0
@@ -226,11 +226,11 @@
 "2026","Feb","Chipps Island","CHN","Winter","Marked_Total",0
 "2026","Feb","Chipps Island","CHN","Winter","Unknown",0
 "2026","Feb","Chipps Island","CHN","Winter","Unmarked_Total",0
-"2026","Feb","Chipps Island","CHN","Winter","Wild",0.00000587546966559682
+"2026","Feb","Chipps Island","CHN","Winter","Wild",0.0000152732237404912
 "2026","Feb","Mossdale","CHN","Not_SpringWinter","Marked_Total",0
 "2026","Feb","Mossdale","CHN","Not_SpringWinter","Unknown",0
 "2026","Feb","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
-"2026","Feb","Mossdale","CHN","Not_SpringWinter","Wild",0.0000143138388491236
+"2026","Feb","Mossdale","CHN","Not_SpringWinter","Wild",0.0000287801387848607
 "2026","Feb","Mossdale","CHN","Spring","Marked_Total",0
 "2026","Feb","Mossdale","CHN","Spring","Unknown",0
 "2026","Feb","Mossdale","CHN","Spring","Unmarked_Total",0
@@ -239,122 +239,122 @@
 "2026","Feb","Mossdale","CHN","Winter","Unknown",0
 "2026","Feb","Mossdale","CHN","Winter","Unmarked_Total",0
 "2026","Feb","Mossdale","CHN","Winter","Wild",0
-"2026","Feb","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.00000531157683647927
+"2026","Feb","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.000202910871222917
 "2026","Feb","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
 "2026","Feb","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
-"2026","Feb","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.00138354322443577
+"2026","Feb","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.0339413346343421
 "2026","Feb","Sherwood Harbor","CHN","Spring","Marked_Total",0
 "2026","Feb","Sherwood Harbor","CHN","Spring","Unknown",0
 "2026","Feb","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
-"2026","Feb","Sherwood Harbor","CHN","Spring","Wild",0.0000706859084917827
-"2026","Feb","Sherwood Harbor","CHN","Winter","Marked_Total",0.0000563546674996811
+"2026","Feb","Sherwood Harbor","CHN","Spring","Wild",0.00169041404206738
+"2026","Feb","Sherwood Harbor","CHN","Winter","Marked_Total",0.00257811742248717
 "2026","Feb","Sherwood Harbor","CHN","Winter","Unknown",0
 "2026","Feb","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
-"2026","Feb","Sherwood Harbor","CHN","Winter","Wild",0.0000340536982487027
-"2026","Mar","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.00000173849357817256
+"2026","Feb","Sherwood Harbor","CHN","Winter","Wild",0.000751859350748229
+"2026","Mar","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000132340261203722
 "2026","Mar","Chipps Island","CHN","Not_SpringWinter","Unknown",0
 "2026","Mar","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
 "2026","Mar","Chipps Island","CHN","Not_SpringWinter","Wild",0
-"2026","Mar","Chipps Island","CHN","Spring","Marked_Total",0.00000436964182551713
+"2026","Mar","Chipps Island","CHN","Spring","Marked_Total",0.0000272140523360117
 "2026","Mar","Chipps Island","CHN","Spring","Unknown",0
 "2026","Mar","Chipps Island","CHN","Spring","Unmarked_Total",0
-"2026","Mar","Chipps Island","CHN","Spring","Wild",0.0000479812750972012
-"2026","Mar","Chipps Island","CHN","Winter","Marked_Total",0.0000224818794872097
+"2026","Mar","Chipps Island","CHN","Spring","Wild",0.000393871816313528
+"2026","Mar","Chipps Island","CHN","Winter","Marked_Total",0.000138159482835791
 "2026","Mar","Chipps Island","CHN","Winter","Unknown",0
 "2026","Mar","Chipps Island","CHN","Winter","Unmarked_Total",0
-"2026","Mar","Chipps Island","CHN","Winter","Wild",0.0000730737327824477
-"2026","Mar","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.000000965068498362368
+"2026","Mar","Chipps Island","CHN","Winter","Wild",0.000535034827874422
+"2026","Mar","Mossdale","CHN","Not_SpringWinter","Marked_Total",0
 "2026","Mar","Mossdale","CHN","Not_SpringWinter","Unknown",0
 "2026","Mar","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
-"2026","Mar","Mossdale","CHN","Not_SpringWinter","Wild",0.00000511129841101309
-"2026","Mar","Mossdale","CHN","Spring","Marked_Total",0.0000709519361687745
+"2026","Mar","Mossdale","CHN","Not_SpringWinter","Wild",0.00000992814788297855
+"2026","Mar","Mossdale","CHN","Spring","Marked_Total",0.000362066632343314
 "2026","Mar","Mossdale","CHN","Spring","Unknown",0
 "2026","Mar","Mossdale","CHN","Spring","Unmarked_Total",0
 "2026","Mar","Mossdale","CHN","Spring","Wild",0
-"2026","Mar","Mossdale","CHN","Winter","Marked_Total",0
+"2026","Mar","Mossdale","CHN","Winter","Marked_Total",0.00000482534249181184
 "2026","Mar","Mossdale","CHN","Winter","Unknown",0
 "2026","Mar","Mossdale","CHN","Winter","Unmarked_Total",0
-"2026","Mar","Mossdale","CHN","Winter","Wild",0.00000328495641951418
-"2026","Mar","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000811510615236438
+"2026","Mar","Mossdale","CHN","Winter","Wild",0.0000154719317549146
+"2026","Mar","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.00497763788333342
 "2026","Mar","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
 "2026","Mar","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
-"2026","Mar","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.000187173119129789
-"2026","Mar","Sherwood Harbor","CHN","Spring","Marked_Total",0.0000105293500454039
+"2026","Mar","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.00486409255534349
+"2026","Mar","Sherwood Harbor","CHN","Spring","Marked_Total",0.000591291529636689
 "2026","Mar","Sherwood Harbor","CHN","Spring","Unknown",0
 "2026","Mar","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
-"2026","Mar","Sherwood Harbor","CHN","Spring","Wild",0.000293365118635985
-"2026","Mar","Sherwood Harbor","CHN","Winter","Marked_Total",0.0000259155017633802
+"2026","Mar","Sherwood Harbor","CHN","Spring","Wild",0.0166354469067451
+"2026","Mar","Sherwood Harbor","CHN","Winter","Marked_Total",0.000284047637315099
 "2026","Mar","Sherwood Harbor","CHN","Winter","Unknown",0
 "2026","Mar","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
-"2026","Mar","Sherwood Harbor","CHN","Winter","Wild",0.000019680633004548
-"2026","Apr","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000825133556664871
+"2026","Mar","Sherwood Harbor","CHN","Winter","Wild",0.00014550112771974
+"2026","Apr","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.00128795398987204
 "2026","Apr","Chipps Island","CHN","Not_SpringWinter","Unknown",0
 "2026","Apr","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0
-"2026","Apr","Chipps Island","CHN","Not_SpringWinter","Wild",0.0000714913089542051
-"2026","Apr","Chipps Island","CHN","Spring","Marked_Total",0.0000114360572129135
+"2026","Apr","Chipps Island","CHN","Not_SpringWinter","Wild",0.000756829593164556
+"2026","Apr","Chipps Island","CHN","Spring","Marked_Total",0.000115655141943521
 "2026","Apr","Chipps Island","CHN","Spring","Unknown",0
 "2026","Apr","Chipps Island","CHN","Spring","Unmarked_Total",0
-"2026","Apr","Chipps Island","CHN","Spring","Wild",0.000203302819008752
+"2026","Apr","Chipps Island","CHN","Spring","Wild",0.00331667804896241
 "2026","Apr","Chipps Island","CHN","Winter","Marked_Total",0
 "2026","Apr","Chipps Island","CHN","Winter","Unknown",0
 "2026","Apr","Chipps Island","CHN","Winter","Unmarked_Total",0
-"2026","Apr","Chipps Island","CHN","Winter","Wild",0.00000148643187794336
-"2026","Apr","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.000000773557596737255
+"2026","Apr","Chipps Island","CHN","Winter","Wild",0.0000157397680803034
+"2026","Apr","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.00000464134558042353
 "2026","Apr","Mossdale","CHN","Not_SpringWinter","Unknown",0
 "2026","Apr","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
-"2026","Apr","Mossdale","CHN","Not_SpringWinter","Wild",0.0000122141004940632
-"2026","Apr","Mossdale","CHN","Spring","Marked_Total",0.00000321995689450243
+"2026","Apr","Mossdale","CHN","Not_SpringWinter","Wild",0.00011538584449547
+"2026","Apr","Mossdale","CHN","Spring","Marked_Total",0.0000131260383755638
 "2026","Apr","Mossdale","CHN","Spring","Unknown",0
 "2026","Apr","Mossdale","CHN","Spring","Unmarked_Total",0
-"2026","Apr","Mossdale","CHN","Spring","Wild",0.0000842370828813116
+"2026","Apr","Mossdale","CHN","Spring","Wild",0.000704898563685641
 "2026","Apr","Mossdale","CHN","Winter","Marked_Total",0
 "2026","Apr","Mossdale","CHN","Winter","Unknown",0
 "2026","Apr","Mossdale","CHN","Winter","Unmarked_Total",0
-"2026","Apr","Mossdale","CHN","Winter","Wild",0.000000712130660025121
-"2026","Apr","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.000155666561294736
+"2026","Apr","Mossdale","CHN","Winter","Wild",0.00000213639198007536
+"2026","Apr","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.00286395300344075
 "2026","Apr","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
 "2026","Apr","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
-"2026","Apr","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.000317192086194787
-"2026","Apr","Sherwood Harbor","CHN","Spring","Marked_Total",0.0000621829031093001
+"2026","Apr","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.00308109386719637
+"2026","Apr","Sherwood Harbor","CHN","Spring","Marked_Total",0.000767834918460411
 "2026","Apr","Sherwood Harbor","CHN","Spring","Unknown",0
 "2026","Apr","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
-"2026","Apr","Sherwood Harbor","CHN","Spring","Wild",0.000341485907423307
+"2026","Apr","Sherwood Harbor","CHN","Spring","Wild",0.00842637871715632
 "2026","Apr","Sherwood Harbor","CHN","Winter","Marked_Total",0
 "2026","Apr","Sherwood Harbor","CHN","Winter","Unknown",0
 "2026","Apr","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
 "2026","Apr","Sherwood Harbor","CHN","Winter","Wild",0
-"2026","May","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.0000118797752334614
+"2026","May","Chipps Island","CHN","Not_SpringWinter","Marked_Total",0.000137355398675824
 "2026","May","Chipps Island","CHN","Not_SpringWinter","Unknown",0
-"2026","May","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0.00000299879214865155
-"2026","May","Chipps Island","CHN","Not_SpringWinter","Wild",0.0000332046615699894
+"2026","May","Chipps Island","CHN","Not_SpringWinter","Unmarked_Total",0.000148873916090784
+"2026","May","Chipps Island","CHN","Not_SpringWinter","Wild",0.000143014722203903
 "2026","May","Chipps Island","CHN","Spring","Marked_Total",0
 "2026","May","Chipps Island","CHN","Spring","Unknown",0
 "2026","May","Chipps Island","CHN","Spring","Unmarked_Total",0
-"2026","May","Chipps Island","CHN","Spring","Wild",0.0000367381244060205
+"2026","May","Chipps Island","CHN","Spring","Wild",0.00051475425997325
 "2026","May","Chipps Island","CHN","Winter","Marked_Total",0
 "2026","May","Chipps Island","CHN","Winter","Unknown",0
 "2026","May","Chipps Island","CHN","Winter","Unmarked_Total",0
 "2026","May","Chipps Island","CHN","Winter","Wild",0
-"2026","May","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.000000714904820746659
+"2026","May","Mossdale","CHN","Not_SpringWinter","Marked_Total",0.00000571923856597327
 "2026","May","Mossdale","CHN","Not_SpringWinter","Unknown",0
 "2026","May","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
-"2026","May","Mossdale","CHN","Not_SpringWinter","Wild",0.0000130163359868092
+"2026","May","Mossdale","CHN","Not_SpringWinter","Wild",0.0000709066825804706
 "2026","May","Mossdale","CHN","Spring","Marked_Total",0
 "2026","May","Mossdale","CHN","Spring","Unknown",0
 "2026","May","Mossdale","CHN","Spring","Unmarked_Total",0
-"2026","May","Mossdale","CHN","Spring","Wild",0.0000251831842237276
+"2026","May","Mossdale","CHN","Spring","Wild",0.000185354690772225
 "2026","May","Mossdale","CHN","Winter","Marked_Total",0
 "2026","May","Mossdale","CHN","Winter","Unknown",0
 "2026","May","Mossdale","CHN","Winter","Unmarked_Total",0
 "2026","May","Mossdale","CHN","Winter","Wild",0
-"2026","May","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.0000016404745356638
+"2026","May","Sherwood Harbor","CHN","Not_SpringWinter","Marked_Total",0.00000492142360699139
 "2026","May","Sherwood Harbor","CHN","Not_SpringWinter","Unknown",0
 "2026","May","Sherwood Harbor","CHN","Not_SpringWinter","Unmarked_Total",0
-"2026","May","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.0000476900700316389
+"2026","May","Sherwood Harbor","CHN","Not_SpringWinter","Wild",0.000104520091146188
 "2026","May","Sherwood Harbor","CHN","Spring","Marked_Total",0
 "2026","May","Sherwood Harbor","CHN","Spring","Unknown",0
 "2026","May","Sherwood Harbor","CHN","Spring","Unmarked_Total",0
-"2026","May","Sherwood Harbor","CHN","Spring","Wild",0.00000770988764484943
+"2026","May","Sherwood Harbor","CHN","Spring","Wild",0.0000168858617576557
 "2026","May","Sherwood Harbor","CHN","Winter","Marked_Total",0
 "2026","May","Sherwood Harbor","CHN","Winter","Unknown",0
 "2026","May","Sherwood Harbor","CHN","Winter","Unmarked_Total",0
@@ -374,7 +374,7 @@
 "2026","Jun","Mossdale","CHN","Not_SpringWinter","Marked_Total",0
 "2026","Jun","Mossdale","CHN","Not_SpringWinter","Unknown",0
 "2026","Jun","Mossdale","CHN","Not_SpringWinter","Unmarked_Total",0
-"2026","Jun","Mossdale","CHN","Not_SpringWinter","Wild",0.00000178106576607146
+"2026","Jun","Mossdale","CHN","Not_SpringWinter","Wild",0.00000433690760176106
 "2026","Jun","Mossdale","CHN","Spring","Marked_Total",0
 "2026","Jun","Mossdale","CHN","Spring","Unknown",0
 "2026","Jun","Mossdale","CHN","Spring","Unmarked_Total",0
