@@ -61,7 +61,8 @@ set.seed(123)
 # We will use 3-4 for this script
 
 #################### Import Data from EDI publication - new #########################
-wd <- "C:/Users/lyamane/OneDrive - DOI/Documents/R/DJFMP"
+## User needs to add the appropriate working directory of downloaded EDI published data##
+# wd <- # user's working directory for data
 data_dir <- "/Data/2026/edi.244.17/"
 
 sample_catch_beach_seine <- read.csv(file.path(paste0(wd,data_dir,"1976-2026_DJFMP_beach_seine_fish_and_water_quality_data_SID.csv"))) %>%
